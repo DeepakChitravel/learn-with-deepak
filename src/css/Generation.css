@@ -1,0 +1,36 @@
+.generation-section {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  color: #2e8b57;
+  border-bottom: 3px solid #2e8b57;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.generation-item {
+  margin-bottom: 20px;
+}
+
+.generation-item h4 {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.generation-item ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+.generation-item ul li {
+  margin-bottom: 6px;
+}

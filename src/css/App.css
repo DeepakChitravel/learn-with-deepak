@@ -1,0 +1,19 @@
+.page-layout {
+  display: flex;
+  padding-top: 70px; /* Same height as your navbar */
+}
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #f1f1f1;
+  padding: 20px;
+  position: sticky;
+  top: 70px; /* aligns with navbar */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}

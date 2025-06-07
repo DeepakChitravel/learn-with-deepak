@@ -1,0 +1,28 @@
+.sidebar {
+  width: 220px;
+  background-color: #f1f1f1;
+  height: 100vh;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
