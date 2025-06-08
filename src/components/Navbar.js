@@ -16,6 +16,8 @@ const Navbar = () => {
 <Nav.Link as={Link} to="/react">React</Nav.Link>
 <Nav.Link as={Link} to="/course">Course</Nav.Link>
 <Nav.Link as={Link} to="/fundamentals">Fundamentals of Computer</Nav.Link>
+<Nav.Link as={Link} to="/msword">MS Word</Nav.Link>
+
 
           </Nav>
         </BSNavbar.Collapse>

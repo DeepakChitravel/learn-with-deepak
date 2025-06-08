@@ -9,10 +9,12 @@ const FundamentalsLayout = () => {
     <div className="layout-container">
       <FundamentalsSidebar />
       <div className="main-content">
+        
         <Outlet />
-      </div>``
+      </div>
     </div>
   );
 };
 
 export default FundamentalsLayout;
+
