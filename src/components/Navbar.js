@@ -1,24 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Nav, Navbar as BSNavbar } from 'react-bootstrap';
+import { Link, useLocation } from 'react-router-dom';
+import '../css/Navbar.css';
+
+const languages = [
+  { name: 'HTML', path: '/html' },
+  { name: 'CSS', path: '/css' },
+  { name: 'JavaScript', path: '/javascript' },
+  { name: 'Fundamentals of Computer', path: '/Fundamentals' },
+  { name: 'MS Office', path: '/msword' },
+  { name: 'Course', path: '/course' },
+  
+];
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
-    <BSNavbar bg="dark" variant="dark" expand="lg" fixed="top">
-      <Container>
-        <BSNavbar.Brand as={Link} to="/">Learn With Deepak</BSNavbar.Brand>
-        <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
-        <BSNavbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/html">HTML</Nav.Link>
-            <Nav.Link as={Link} to="/css">CSS</Nav.Link>
-            <Nav.Link as={Link} to="/course">Course</Nav.Link>
-            <Nav.Link as={Link} to="/fundamentals">Fundamentals of Computer</Nav.Link>
-            <Nav.Link as={Link} to="/msword">MS Office</Nav.Link>
-          </Nav>
-        </BSNavbar.Collapse>
-      </Container>
-    </BSNavbar>
+    <nav className="w3-language-navbar">
+      <ul className="w3-language-list">
+        {languages.map((lang) => (
+          <li key={lang.name} className={location.pathname === lang.path ? 'active' : ''}>
+            <Link to={lang.path}>{lang.name}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

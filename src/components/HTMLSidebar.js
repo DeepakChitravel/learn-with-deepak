@@ -25,12 +25,12 @@ const HTMLSidebar = () => {
       <NavLink to="/html/FontProperties" activeclassname="active">Font Properties</NavLink>
       <NavLink to="/html/ImageInsert" activeclassname="active">Inserting Image</NavLink>
       <NavLink to="/html/MediaTag" activeclassname="active">Media Tag</NavLink>
+      <NavLink to="/html/FormDemo" activeclassname="active">Form Tag</NavLink>
+      <NavLink to="/html/DataEntryForm" activeclassname="active">Data Entry Form</NavLink>
+      <NavLink to="/html/RegistrationForm" activeclassname="active">Registration Form</NavLink>
+      <NavLink to="/html/LinkTag" activeclassname="active">Link Tag</NavLink>
+      <NavLink to="/html/FaviconTag" activeclassname="active">Favicon Tag</NavLink>
 
-
-
-
-
-   
       {/* Add more links as needed */}
     </div>
   );

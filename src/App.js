@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import FundamentalsLayout from './pages/fundamentals/FundamentalsLayout';
 import IntroPage from './pages/fundamentals/IntroPage';
 import Generation from './pages/fundamentals/Generation';
-import ApplicationCourse from './pages/ApplicationCourse';
+import ApplicationCourse from './pages/course/ApplicationCourse';
 import Devices from './pages/fundamentals/Devices';
 import Memory from './pages/fundamentals/Memory';
 import HardwareSoftware from './pages/fundamentals/HardwareSoftware';
@@ -45,9 +45,16 @@ import MarksheetTable from './pages/html/MarksheetTable';
 import FontProperties from './pages/html/FontProperties';
 import ImageInsert from './pages/html/ImageInsert';
 import MediaTag from './pages/html/MediaTag';
+import FormDemo from './pages/html/FormDemo';
+import DataEntryForm from './pages/html/DataEntryForm';
+import RegistrationForm from './pages/html/ResgistrationForm';
+import LinkTag from './pages/html/LinkTag';
+import FaviconTag from './pages/html/FaviconTag';
+import CSSIntro from './pages/css/CSSIntro';
+import CSSLayout from './pages/css/CSSLayout';
+import CSSLinkTag from './pages/css/CSSLinkTag'; 
 
-
-function App() {
+function App() {  
   return (
     <BrowserRouter>
       <Navbar />
@@ -55,6 +62,7 @@ function App() {
         <Route path="/course" element={<ApplicationCourse />} />
         {/* Nested Routes under /fundamentals */}
         <Route path="/fundamentals" element={<FundamentalsLayout />}>
+        <Route index element={<IntroPage />} />
           <Route path="intro" element={<IntroPage />} />
           <Route path="generation" element={<Generation />} />
           <Route path="devices" element={<Devices />} />
@@ -66,6 +74,7 @@ function App() {
         </Route>
         {/* Nested Routes under /msword */}
         <Route path="/msword" element={<MSWordLayout />}>
+        <Route index element={<MSWordIntro />} />
           <Route path="shortcutkey" element={<ShortcutKey />} />
           <Route path="Formula" element={<Formula />} />
           <Route path="Practice" element={<Practice />} />
@@ -82,8 +91,8 @@ function App() {
           <Route path="ExcelChartPivot" element={<ExcelChartPivot />} />
         </Route>
 
-
         <Route path="/html" element={<HTMLLayout />}>
+        <Route index element={<Introduction />} />
           <Route path="introduction" element={<Introduction />} />
           <Route path="TagExample" element={<TagExample />} />
           <Route path="FontSizeTag" element={<FontSizeTag />} />
@@ -101,8 +110,20 @@ function App() {
           <Route path="FontProperties" element={<FontProperties />} />
           <Route path="ImageInsert" element={<ImageInsert />} />
           <Route path="MediaTag" element={<MediaTag />} />
-
+          <Route path="FormDemo" element={<FormDemo />} />
+          <Route path="DataEntryForm" element={<DataEntryForm />} />
+          <Route path="RegistrationForm" element={<RegistrationForm />} />
+          <Route path="LinkTag" element={<LinkTag />} />
+          <Route path="FaviconTag" element={<FaviconTag />} />
         </Route>
+
+
+        <Route path="/css" element={<CSSLayout />}>
+        <Route index element={<CSSIntro />} />
+          <Route path="CSSIntro" element={<CSSIntro />} />
+          <Route path="CSSLinkTag" element={<CSSLinkTag />} />
+        </Route>
+
 
       </Routes>
       <Footer />
