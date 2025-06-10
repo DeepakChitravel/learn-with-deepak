@@ -1,41 +1,49 @@
 .sidebar {
-  width: 250px;
-  background-color: #f1f1f1;
-  height: 100vh;
+  width: 350px;               /* Fixed width */
+  min-width: 270px;           /* Prevent shrinking */
+  max-width: 270px;           /* Prevent expansion */
+  background-color: #E7E9EB;
   padding: 20px 10px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;         /* Prevent horizontal scroll */
   position: sticky;
   top: 0;
-  overflow-y: auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  flex-shrink: 0;             /* Prevent shrinking in flex layout */
 }
 
-.sidebar h5 {
-  font-size: 16px;
-  margin: 20px 10px 10px;
-  color: #333;
-  font-weight: bold;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-}
-
-.sidebar a {
+.sidebar-nav a {
   display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #000;
-  border-radius: 5px;
-  margin: 5px 0;
+  text-decoration: none;  /* REMOVE underline */
+  color: #000;            /* Force black text */
   font-size: 15px;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+    padding: 3px 15px 3px 40px;
+    width: 100%;
 }
 
-.sidebar a:hover {
-  background-color: #d4edda;
-  color: #000;
+.sidebar-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 16px 10px;
+  color: #000;             /* Force black color */
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar a.active {
+.sidebar-nav a:hover {
+  background-color: #e7e9eb;
+}
+
+.sidebar-nav a.active {
   background-color: #04AA6D;
   color: white;
 }

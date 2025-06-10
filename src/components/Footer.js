@@ -8,7 +8,7 @@ const Footer = () => {
       className="text-white pt-5 pb-4"
       style={{
         background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)',
-        marginTop: '60px'
+       
       }}
     >
       <Container>
