@@ -6,6 +6,17 @@ const CSSIntro = () => {
     <Container className="my-5">
       <Card className="p-4 shadow-sm border-0 rounded-4">
         <h2 className="text-primary fw-bold mb-3">🎨 CSS Introduction</h2>
+
+        <h4 className="text-secondary">👨‍🔬 Who Invented CSS?</h4>
+        <p>
+          CSS, which stands for <strong>Cascading Style Sheet</strong>, was invented by <strong>Håkon Wium Lie</strong> in <strong>1994</strong> while working at <strong>CERN</strong>, the European Organization for Nuclear Research. He collaborated with <strong>Tim Berners-Lee</strong>, the inventor of the World Wide Web.
+        </p>
+        <p>
+          Before CSS, web pages were styled using only HTML, which had limited formatting options like bold and italics. As websites became more complex, CSS was introduced to separate content from presentation, improve flexibility, and enhance maintainability.
+        </p>
+
+        <hr />
+
         <p><strong>Full Form:</strong> Cascading Style Sheet</p>
         <p><strong>Developer:</strong> Håkon Wium Lie</p>
         <p><strong>Released Date:</strong> October 10, 1994</p>

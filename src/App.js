@@ -53,6 +53,16 @@ import FaviconTag from './pages/html/FaviconTag';
 import CSSIntro from './pages/css/CSSIntro';
 import CSSLayout from './pages/css/CSSLayout';
 import CSSLinkTag from './pages/css/CSSLinkTag'; 
+import Border from './pages/css/Border';
+import TextProperties from './pages/css/TextProperties';
+import FontStyle from './pages/css/FontStyle';
+import Background from './pages/css/Background';
+import Margin from './pages/css/Margin';
+import BackgroundProperties from './pages/css/BackgroundProperties';
+import Padding from './pages/css/Padding';
+import Display from './pages/css/Display';
+import Selector from './pages/css/Selector';
+
 
 function App() {  
   return (
@@ -122,6 +132,15 @@ function App() {
         <Route index element={<CSSIntro />} />
           <Route path="CSSIntro" element={<CSSIntro />} />
           <Route path="CSSLinkTag" element={<CSSLinkTag />} />
+          <Route path="Border" element={<Border />} />
+          <Route path="TextProperties" element={<TextProperties />} />
+          <Route path="FontStyle" element={<FontStyle />} />
+          <Route path="Background" element={<Background />} />
+          <Route path="margin" element={<Margin />} />
+          <Route path="BackgroundProperties" element={<BackgroundProperties />} />
+          <Route path="Padding" element={<Padding />} />
+          <Route path="Display" element={<Display />} />
+          <Route path="Selector" element={<Selector />} />
         </Route>
 
 
