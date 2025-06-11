@@ -71,6 +71,28 @@ import AddAndMul from './pages/c/AddAndMul';
 import SubAndDiv from './pages/c/SubAndDiv';
 import CIdentifiers from './pages/c/CIdentifiers';
 import ASCII from './pages/c/ASCII';
+import CSSFlexBox from './pages/css/CSSFlexBox';
+import CSSFloat from './pages/css/CSSFloat';
+import CSSHover from './pages/css/CSSHover';
+import CSSTransition from './pages/css/CSSTransition';
+import CSSFlexContainer from './pages/css/CSSFlexContainer';
+import CSSFlexWrap from './pages/css/CSSFlexWrap';
+import CSSJustifyContent from './pages/css/CSSJustifyContent';
+import CSSAlignItems from './pages/css/CSSAlignItems';
+import CSSAlignContent from './pages/css/CSSAlignContent';
+import CSSGrid from './pages/css/CSSGrid';
+import CSSTransform2D from './pages/css/CSSTransform2D';
+import CSSTransform3D from './pages/css/CSSTranform3D';
+import CSSCombinators from './pages/css/CSSCombinators';
+import CSSAnimation from './pages/css/CSSAnimation';
+import AnimatedButton from './pages/css/AnimatedButton';
+import ButtonDesigns from './pages/css/ButtonDesigns';
+import AnimationFillMode from './pages/css/AnimationFillMode';
+import ImageButton from './pages/css/ImageButton';
+import CSSDropdown from './pages/css/CSSDropdown';
+import ImageDropdown from './pages/css/ImageDropdown';
+import CSSLinearGradients from './pages/css/CSSLinearGradients';
+
 
 function App() {  
   return (
@@ -149,6 +171,27 @@ function App() {
           <Route path="Padding" element={<Padding />} />
           <Route path="Display" element={<Display />} />
           <Route path="Selector" element={<Selector />} />
+          <Route path="CSSFlexBox" element={<CSSFlexBox />} />
+          <Route path="CSSFloat" element={<CSSFloat />} />
+          <Route path="CSSHover" element={<CSSHover />} />
+          <Route path="CSSTransition" element={<CSSTransition />} />
+          <Route path="CSSFlexContainer" element={<CSSFlexContainer />} />
+          <Route path="CSSFlexWrap" element={<CSSFlexWrap />} />
+          <Route path="CSSJustityContent" element={<CSSJustifyContent />} />
+          <Route path="CSSAlignItems" element={<CSSAlignItems />} />
+          <Route path="CSSAlignContent" element={<CSSAlignContent />} />
+          <Route path="CSSGrid" element={<CSSGrid />} />
+          <Route path="CSSTransform2D" element={<CSSTransform2D />} />
+          <Route path="CSSTransform3D" element={<CSSTransform3D />} />
+          <Route path="CSSCombinators" element={<CSSCombinators />} />
+          <Route path="CSSAnimation" element={<CSSAnimation />} />
+          <Route path="AnimatedButton" element={<AnimatedButton />} />
+          <Route path="ButtonDesigns" element={<ButtonDesigns />} />
+          <Route path="AnimationFillMode" element={<AnimationFillMode />} />
+          <Route path="ImageButton" element={<ImageButton />} />
+          <Route path="CSSDropdown" element={<CSSDropdown />} />
+          <Route path="ImageDropdown" element={<ImageDropdown />} />
+          <Route path="CSSLinearGradients" element={<CSSLinearGradients />} />
         </Route>
 
          <Route path="/c" element={<CLayout />}>
