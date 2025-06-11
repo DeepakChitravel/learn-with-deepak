@@ -1,13 +1,12 @@
-// src/components/CSSSidebar.js
-import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../css/FundamentalsSidebar.css'; // Reuse existing sidebar styles
+import '../css/FundamentalsSidebar.css';
 
 const CSSSidebar = () => {
   return (
     <div className="sidebar">
-      <h5>🎨 CSS Topics</h5>
-      <NavLink to="/css/CSSIntro" activeclassname="active">CSS Introduction</NavLink>
+      <h5 className="sidebar-title">HTML Tutorial</h5>
+      <nav className="sidebar-nav">
+       <NavLink to="/css/CSSIntro" activeclassname="active">CSS Introduction</NavLink>
       <NavLink to="/css/CSSLinkTag" activeclassname="active">CSS Link Tag</NavLink>
       <NavLink to="/css/Border" activeclassname="active">Border </NavLink>
       <NavLink to="/css/TextProperties" activeclassname="active">Text Properties </NavLink>
@@ -18,9 +17,10 @@ const CSSSidebar = () => {
       <NavLink to="/css/Padding" activeclassname="active">Padding Properties </NavLink>
       <NavLink to="/css/Display" activeclassname="active">Display Properties </NavLink>
       <NavLink to="/css/Selector" activeclassname="active">CSS Selector </NavLink>
-   
+      </nav>
     </div>
   );
 };
 
 export default CSSSidebar;
+

@@ -6,10 +6,10 @@ const languages = [
   { name: 'HTML', path: '/html' },
   { name: 'CSS', path: '/css' },
   { name: 'JavaScript', path: '/javascript' },
+   { name: 'C', path: '/c' },
   { name: 'Fundamentals of Computer', path: '/Fundamentals' },
   { name: 'MS Office', path: '/msword' },
   { name: 'Course', path: '/course' },
-  
 ];
 
 const Navbar = () => {
