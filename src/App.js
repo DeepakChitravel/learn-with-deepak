@@ -65,6 +65,12 @@ import Selector from './pages/css/Selector';
 import CLayout from './pages/c/CLayout';
 import CIntro from './pages/c/CIntro';
 import SwapC from './pages/c/SwapC';
+import EBBill from './pages/c/EBBill';
+import CVariable from './pages/c/CVariable';
+import AddAndMul from './pages/c/AddAndMul';
+import SubAndDiv from './pages/c/SubAndDiv';
+import CIdentifiers from './pages/c/CIdentifiers';
+import ASCII from './pages/c/ASCII';
 
 function App() {  
   return (
@@ -149,6 +155,12 @@ function App() {
         <Route index element={<CIntro />} />
           <Route path="CIntro" element={<CIntro />} />
           <Route path="SwapC" element={<SwapC />} />
+          <Route path="EBBill" element={<EBBill />} />
+          <Route path="CVariable" element={<CVariable />} />
+          <Route path="AddAndMul" element={<AddAndMul />} />
+          <Route path="SubAndDiv" element={<SubAndDiv />} />
+          <Route path="CIdentifiers" element={<CIdentifiers />} />
+          <Route path="ASCII" element={<ASCII />} />
         </Route>
 
       </Routes>
