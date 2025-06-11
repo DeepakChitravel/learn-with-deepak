@@ -63,7 +63,7 @@ import Padding from './pages/css/Padding';
 import Display from './pages/css/Display';
 import Selector from './pages/css/Selector';
 import CLayout from './pages/c/CLayout';
-import CIntro from './pages/c/CIntro';
+import CIntro from './pages/c/CIntroduction';
 import SwapC from './pages/c/SwapC';
 import EBBill from './pages/c/EBBill';
 import CVariable from './pages/c/CVariable';
@@ -92,7 +92,18 @@ import ImageButton from './pages/css/ImageButton';
 import CSSDropdown from './pages/css/CSSDropdown';
 import ImageDropdown from './pages/css/ImageDropdown';
 import CSSLinearGradients from './pages/css/CSSLinearGradients';
-
+import Datatypes from './pages/c/Datatypes';
+import CShortcutKeys from './pages/c/CShortcutKeys';
+import EnumDatatype from './pages/c/EnumDataType';
+import CComments from './pages/c/CComments';
+import CFormatSpecifiers from './pages/c/CFormatSpecifiers';
+import CFeatures from './pages/c/CFeatures';
+import CKeywords from './pages/c/CKeywords';
+import CSampleIntFloat from './pages/c/CSampleIntFloat';
+import CSubMulDiv from './pages/c/CSubMulDiv';
+import CVariables from './pages/c/CVaribles';
+import CBasics from './pages/c/CBasics';
+import VariableTypes from './pages/c/VariableTypes';
 
 function App() {  
   return (
@@ -204,6 +215,18 @@ function App() {
           <Route path="SubAndDiv" element={<SubAndDiv />} />
           <Route path="CIdentifiers" element={<CIdentifiers />} />
           <Route path="ASCII" element={<ASCII />} />
+          <Route path="Datatypes" element={<Datatypes />} />
+          <Route path="CShortcutKeys" element={<CShortcutKeys />} />
+          <Route path="EnumDataType" element={<EnumDatatype />} />
+          <Route path="CComments" element={<CComments />} />
+          <Route path="CFormatSpecifiers" element={<CFormatSpecifiers />} />
+          <Route path="CFeatures" element={<CFeatures />} />
+          <Route path="CKeywords" element={<CKeywords />} />
+          <Route path="CSampleIntFloat" element={<CSampleIntFloat />} />
+          <Route path="CSubMulDiv" element={<CSubMulDiv />} />
+          <Route path="CVariables" element={<CVariables />} />
+          <Route path="CBasics" element={<CBasics />} />
+          <Route path="VariableTypes" element={<VariableTypes />} />
         </Route>
 
       </Routes>
