@@ -13,7 +13,7 @@ import HardwareSoftware from './pages/fundamentals/HardwareSoftware';
 import ProgrammingLanguages from './pages/fundamentals/ProgrammingLanguages';
 import BitAndComputer from './pages/fundamentals/BitAndComputer';
 import ShortcutKey from './pages/msoffice/ShortcutKey';
-import MSWordLayout from './pages/msoffice/MSWordLayout';
+import MSOfficeLayout from './pages/msoffice/MSOfficeLayout';
 import Formula from './pages/msoffice/Formula';
 import Practice from './pages/msoffice/Practice';
 import MSWordIntro from './pages/msoffice/MSWordIntro';
@@ -62,7 +62,9 @@ import BackgroundProperties from './pages/css/BackgroundProperties';
 import Padding from './pages/css/Padding';
 import Display from './pages/css/Display';
 import Selector from './pages/css/Selector';
-
+import CLayout from './pages/c/CLayout';
+import CIntro from './pages/c/CIntro';
+import SwapC from './pages/c/SwapC';
 
 function App() {  
   return (
@@ -83,7 +85,7 @@ function App() {
           <Route path="BitAndComputer" element={<BitAndComputer />} />
         </Route>
         {/* Nested Routes under /msword */}
-        <Route path="/msword" element={<MSWordLayout />}>
+        <Route path="/msword" element={<MSOfficeLayout />}>
         <Route index element={<MSWordIntro />} />
           <Route path="shortcutkey" element={<ShortcutKey />} />
           <Route path="Formula" element={<Formula />} />
@@ -143,6 +145,11 @@ function App() {
           <Route path="Selector" element={<Selector />} />
         </Route>
 
+         <Route path="/c" element={<CLayout />}>
+        <Route index element={<CIntro />} />
+          <Route path="CIntro" element={<CIntro />} />
+          <Route path="SwapC" element={<SwapC />} />
+        </Route>
 
       </Routes>
       <Footer />

@@ -1,12 +1,11 @@
-// src/components/MSWordSidebar.js
-import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../css/FundamentalsSidebar.css'; // Reuse the same CSS for consistent styling
+import '../css/FundamentalsSidebar.css';
 
-const MSWordSidebar = () => {
+const MSOfficeSidebar = () => {
   return (
     <div className="sidebar">
-      <h5>📝 MS Word</h5>
+      <h5 className="sidebar-title">HTML Tutorial</h5>
+      <nav className="sidebar-nav">
       <NavLink to="/msword/mswordintro" activeclassname="active"> MS Word Intorduction</NavLink>
       <NavLink to="/msword/Shortcutkey" activeclassname="active">Shortcut Key</NavLink>
       <NavLink to="/msword/Formula" activeclassname="active">Formula & Alignment</NavLink>
@@ -21,10 +20,10 @@ const MSWordSidebar = () => {
       <NavLink to="/msword/ConditionalFormating" activeclassname="active"> Conditional Formating </NavLink>
       <NavLink to="/msword/SumSeries" activeclassname="active">Sum Series </NavLink>
       <NavLink to="/msword/ExcelChartPivot" activeclassname="active">Charts  </NavLink>
-      
-      {/* Add more as needed */}
+      </nav>
     </div>
   );
 };
 
-export default MSWordSidebar;
+export default MSOfficeSidebar;
+
