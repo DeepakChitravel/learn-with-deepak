@@ -1,64 +1,123 @@
+// VariableTypes.js
+
 import React from 'react';
 
 const VariableTypes = () => {
-  return (
-    <div style={{ background: '#fff', padding: '20px', borderRadius: '10px' }}>
-      <h2 style={{ textAlign: 'center' }}>📘 Types of Variables in C</h2>
+  const code = `
+#include <stdio.h>
 
-      {/* Intro */}
-      <section style={{ marginBottom: '20px' }}>
-        <h4>🔹 What is a Variable?</h4>
-        <p>
-          A variable is a named memory location used to store data. In C, different types of variables exist based on scope, storage class, and lifetime.
-        </p>
-      </section>
+// Global variable
+int globalVar = 100;
 
-      {/* Types */}
-      <section style={{ marginBottom: '20px' }}>
-        <h4>🔹 Types of Variables in C</h4>
-        <ul>
-          <li><strong>Local Variable</strong> – Declared inside a function/block; accessible only within it.</li>
-          <li><strong>Global Variable</strong> – Declared outside all functions; accessible throughout the program.</li>
-          <li><strong>Static Variable</strong> – Retains its value between function calls.</li>
-          <li><strong>Extern Variable</strong> – Declared using <code>extern</code> to access a global variable from another file.</li>
-          <li><strong>Automatic Variable</strong> – Default variable inside a function (same as local).</li>
-          <li><strong>Register Variable</strong> – Stored in CPU register for fast access (suggestion to compiler).</li>
-        </ul>
-      </section>
+// Extern variable
+extern int externVar;
 
-      {/* Sample Code */}
-      <section style={{ marginBottom: '20px' }}>
-        <h4>🧪 Sample Code</h4>
-        <pre style={{ background: '#f4f4f4', padding: '10px' }}>
-          <code>
-{`#include <stdio.h>
+void localExample() {
+    int localVar = 10;  // Local variable
+    printf("Local: %d\\n", localVar);
+}
 
-int globalVar = 10; // Global variable
-
-void testFunction() {
-    static int staticVar = 0; // Static variable
-    int localVar = 5;         // Local variable
+void staticExample() {
+    static int staticVar = 0;  // Static variable
     staticVar++;
-    printf("Local: %d, Static: %d, Global: %d\\n", localVar, staticVar, globalVar);
+    printf("Static: %d\\n", staticVar);
+}
+
+void registerExample() {
+    register int regVar = 5;  // Register variable
+    printf("Register: %d\\n", regVar);
 }
 
 int main() {
-    testFunction();
-    testFunction();
-    return 0;
-}`}
-          </code>
-        </pre>
-      </section>
+    int autoVar = 20;  // Automatic variable
 
-      {/* Output */}
-      <section>
-        <h4>📤 Expected Output</h4>
-        <pre style={{ background: '#eef', padding: '10px' }}>
-{`Local: 5, Static: 1, Global: 10
-Local: 5, Static: 2, Global: 10`}
-        </pre>
-      </section>
+    printf("Global: %d\\n", globalVar);
+    printf("Automatic: %d\\n", autoVar);
+
+    localExample();
+    staticExample();
+    staticExample();
+    registerExample();
+
+    return 0;
+}
+
+// In another file: int externVar = 500;
+  `.trim();
+
+  const output = `
+Global: 100
+Automatic: 20
+Local: 10
+Static: 1
+Static: 2
+Register: 5
+  `.trim();
+
+  const types = [
+    { type: 'Local Variable', detail: 'Declared inside a function or block, accessible only within it.' },
+    { type: 'Global Variable', detail: 'Declared outside all functions, accessible throughout the program.' },
+    { type: 'Static Variable', detail: 'Retains its value between function calls.' },
+    { type: 'Extern Variable', detail: 'Declared using extern keyword to access a global variable from another file.' },
+    { type: 'Automatic Variable', detail: 'Default storage class for local variables inside a function.' },
+    { type: 'Register Variable', detail: 'Stored in CPU register for faster access (compiler may ignore).' },
+  ];
+
+  return (
+    <div style={{
+      padding: '30px',
+      background: '#fff',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Title */}
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '20px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        📘 Types of Variables in C
+      </h2>
+
+      {/* Intro */}
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        Variables in C are named memory locations that store data. Their behavior depends on their scope, lifetime, and storage class.
+      </p>
+
+      {/* Points */}
+      <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
+        {types.map((item, index) => (
+          <li key={index} style={{ marginBottom: '10px' }}>
+            <strong>{item.type}:</strong> {item.detail}
+          </li>
+        ))}
+      </ul>
+
+      {/* Code Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧪 Example Code</h3>
+      <pre style={{
+        background: '#f4f4f4',
+        padding: '15px',
+        borderRadius: '5px',
+        overflowX: 'auto'
+      }}>
+        <code>{code}</code>
+      </pre>
+
+      {/* Output Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>📤 Output</h3>
+      <pre style={{
+        background: '#e8f5e9',
+        padding: '10px',
+        borderRadius: '5px'
+      }}>
+        <code>{output}</code>
+      </pre>
     </div>
   );
 };

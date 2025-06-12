@@ -15,53 +15,83 @@ const ASCII = () => {
   ];
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'monospace' }}>
-      <h1 style={{ textAlign: 'center' }}>🔤 ASCII Table (0–127)</h1>
+    <div style={{
+      padding: '30px',
+      backgroundColor: '#ffffff',
+      fontFamily: 'monospace',
+      lineHeight: '1.7',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0,0,0,0.1)'
+    }}>
+      {/* Header */}
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '28px',
+        color: '#003366',
+        borderBottom: '2px solid #ccc',
+        paddingBottom: '10px',
+        marginBottom: '30px'
+      }}>
+        ASCII Table (0–127)
+      </h2>
 
-      <p style={{ marginBottom: '20px' }}>
-        ASCII (American Standard Code for Information Interchange) assigns numbers (0–127) to characters and control codes. 
-        The table below lists all ASCII values with their respective characters and descriptions.
+      {/* Description */}
+      <p style={{ fontSize: '16px', marginBottom: '25px' }}>
+        ASCII (American Standard Code for Information Interchange) is a character encoding standard 
+        that maps characters and symbols to numeric values ranging from 0 to 127. The table below 
+        displays each ASCII value with its character and description.
       </p>
 
-      <table border="1" cellPadding="6" style={{ borderCollapse: 'collapse', width: '100%', textAlign: 'center' }}>
-        <thead style={{ background: '#f2f2f2' }}>
+      {/* ASCII Table */}
+      <table style={{
+        width: '100%',
+        borderCollapse: 'collapse',
+        marginBottom: '40px',
+        fontSize: '14px'
+      }}>
+        <thead style={{ backgroundColor: '#f0f0f0', fontWeight: 'bold' }}>
           <tr>
-            <th>Decimal</th>
-            <th>Character</th>
-            <th>Description</th>
+            <th style={{ border: '1px solid #ddd', padding: '10px' }}>Decimal</th>
+            <th style={{ border: '1px solid #ddd', padding: '10px' }}>Character</th>
+            <th style={{ border: '1px solid #ddd', padding: '10px' }}>Description</th>
           </tr>
         </thead>
         <tbody>
           {Array.from({ length: 128 }, (_, i) => {
-            const char =
-              i < 32 || i === 127
-                ? ''
-                : String.fromCharCode(i) === ' '
-                ? '[space]'
-                : String.fromCharCode(i);
+            const char = (i < 32 || i === 127)
+              ? ''
+              : String.fromCharCode(i) === ' ' ? '[space]' : String.fromCharCode(i);
 
-            const desc =
-              i < 32
-                ? controlChars[i]
-                : i === 127
-                ? 'DEL (delete)'
-                : i === 32
-                ? 'Space'
-                : 'Printable Character';
+            const desc = i < 32
+              ? controlChars[i]
+              : i === 127
+              ? 'DEL (delete)'
+              : i === 32
+              ? 'Space'
+              : 'Printable Character';
 
             return (
-              <tr key={i}>
-                <td>{i.toString().padStart(3, '0')}</td>
-                <td>{char}</td>
-                <td>{desc}</td>
+              <tr key={i} style={{ borderBottom: '1px solid #eee' }}>
+                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{i.toString().padStart(3, '0')}</td>
+                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{char}</td>
+                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{desc}</td>
               </tr>
             );
           })}
         </tbody>
       </table>
 
-      <h2 style={{ marginTop: '40px' }}>💡 Sample C Code using ASCII</h2>
-      <pre style={{ backgroundColor: '#eee', padding: '10px', borderRadius: '8px' }}>
+      {/* Sample Code Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>
+        Sample C Code Using ASCII
+      </h3>
+      <pre style={{
+        backgroundColor: '#f4f4f4',
+        padding: '15px',
+        borderRadius: '6px',
+        overflowX: 'auto',
+        marginBottom: '30px'
+      }}>
         <code>
 {`#include <stdio.h>
 
@@ -74,8 +104,15 @@ int main() {
         </code>
       </pre>
 
-      <h2>🔹 Output</h2>
-      <pre style={{ backgroundColor: '#f4f4f4', padding: '10px', borderRadius: '8px' }}>
+      {/* Output */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>
+        Output
+      </h3>
+      <pre style={{
+        backgroundColor: '#e8f5e9',
+        padding: '10px',
+        borderRadius: '6px'
+      }}>
         <code>
 {`Character: A
 ASCII Value: 65`}

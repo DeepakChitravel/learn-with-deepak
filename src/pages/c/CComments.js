@@ -23,53 +23,71 @@ Hello, World!
 Learning C Comments!
 `.trim();
 
+  const points = [
+    { type: 'What Are Comments?', detail: 'Explanatory notes added to the code to increase readability and understanding.' },
+    { type: 'Single-line Comment', detail: 'Begins with // and continues to the end of the line.' },
+    { type: 'Multi-line Comment', detail: 'Enclosed between /* and */ and can span multiple lines.' },
+    { type: 'Documentation Purpose', detail: 'Used to describe what a block or line of code is doing for easier maintenance.' },
+    { type: 'Helps Debugging', detail: 'Temporarily disable code by commenting it out during debugging.' },
+    { type: 'Compiler Ignorance', detail: 'The compiler completely skips comments during compilation.' },
+  ];
+
   return (
-    <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '10px' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Comments in C</h2>
+    <div style={{
+      padding: '30px',
+      background: '#fff',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Title */}
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '20px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        Comments in C
+      </h2>
 
-      <section style={{ marginBottom: '20px' }}>
-        <h4>🔹 What is a Comment?</h4>
-        <p>
-          Comments are non-executable statements used to explain the code. They help make code readable and maintainable.
-          Comments are ignored by the compiler.
-        </p>
-      </section>
+      {/* Description */}
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        Comments are non-executable statements used to document and explain code logic.
+        They are ignored by the compiler and do not affect the execution of the program.
+      </p>
 
-      <section style={{ marginBottom: '20px' }}>
-        <h4>🔹 Types of Comments in C</h4>
-        <ul>
-          <li><strong>Single-line Comment</strong> – Starts with <code>//</code></li>
-          <li><strong>Multi-line Comment</strong> – Enclosed between <code>/*</code> and <code>*/</code></li>
-        </ul>
-      </section>
+      {/* Points */}
+      <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
+        {points.map((point, index) => (
+          <li key={index} style={{ marginBottom: '10px' }}>
+            <strong>{point.type}:</strong> {point.detail}
+          </li>
+        ))}
+      </ul>
 
-      <section style={{ marginBottom: '30px' }}>
-        <h4>🔹 Sample Code</h4>
-        <pre style={{
-          backgroundColor: '#1e1e1e',
-          color: '#f8f8f2',
-          padding: '15px',
-          borderRadius: '8px',
-          overflowX: 'auto',
-          fontSize: '14px',
-        }}>
-          <code>{code}</code>
-        </pre>
-      </section>
+      {/* Code Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Example Code</h3>
+      <pre style={{
+        background: '#f4f4f4',
+        padding: '15px',
+        borderRadius: '5px',
+        overflowX: 'auto'
+      }}>
+        <code>{code}</code>
+      </pre>
 
-      <section>
-        <h4>🔹 Output</h4>
-        <pre style={{
-          backgroundColor: '#f4f4f4',
-          color: '#000',
-          padding: '15px',
-          borderRadius: '8px',
-          overflowX: 'auto',
-          fontSize: '14px',
-        }}>
-          <code>{output}</code>
-        </pre>
-      </section>
+      {/* Output Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
+      <pre style={{
+        background: '#e8f5e9',
+        padding: '10px',
+        borderRadius: '5px'
+      }}>
+        <code>{output}</code>
+      </pre>
     </div>
   );
 };

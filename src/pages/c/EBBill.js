@@ -4,7 +4,6 @@ const EBBill = () => {
   const [units, setUnits] = useState('');
   const [bill, setBill] = useState(null);
 
-  // C Code as a string
   const cCode = `
 #include <stdio.h>
 
@@ -26,7 +25,7 @@ int main() {
 
     return 0;
 }
-  `;
+  `.trim();
 
   const calculateBill = (units) => {
     let amount = 0;
@@ -47,17 +46,47 @@ int main() {
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: 'auto' }}>
-      <h2>💡 Electricity Bill Calculator</h2>
+    <div style={{
+      padding: '30px',
+      background: '#fff',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7',
+      maxWidth: '800px',
+      margin: 'auto'
+    }}>
+      {/* Title */}
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '20px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        💡 Electricity Bill Calculator in C & React
+      </h2>
 
-      <h3>📄 C Program Code:</h3>
-      <pre style={{ backgroundColor: '#f4f4f4', padding: '1rem', borderRadius: '5px', overflowX: 'auto' }}>
+      {/* C Code Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>📄 C Program Code</h3>
+      <pre style={{
+        background: '#1e1e1e',
+        color: '#f8f8f2',
+        padding: '15px',
+        borderRadius: '8px',
+        overflowX: 'auto',
+        fontSize: '14px'
+      }}>
         <code>{cCode}</code>
       </pre>
 
-      <h3>⚙️ Try It Yourself (React Version):</h3>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="units">Enter Units Consumed:</label>
+      {/* React Form Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '30px', marginBottom: '10px' }}>⚙️ Try It Yourself</h3>
+      <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+        <label htmlFor="units" style={{ display: 'block', marginBottom: '8px' }}>
+          Enter Units Consumed:
+        </label>
         <input
           type="number"
           id="units"
@@ -65,15 +94,38 @@ int main() {
           onChange={(e) => setUnits(e.target.value)}
           placeholder="e.g., 150"
           required
+          style={{
+            padding: '8px 12px',
+            borderRadius: '4px',
+            border: '1px solid #ccc',
+            marginBottom: '10px',
+            width: '100%',
+            fontFamily: 'monospace'
+          }}
         />
-        <br /><br />
-        <button type="submit">Calculate Bill</button>
+        <button type="submit" style={{
+          backgroundColor: '#007bff',
+          color: '#fff',
+          padding: '8px 16px',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer',
+          fontFamily: 'monospace'
+        }}>
+          Calculate Bill
+        </button>
       </form>
 
+      {/* Output */}
       {bill !== null && (
-        <div style={{ marginTop: '20px' }}>
-          <h3>🖥️ Output</h3>
-          <pre style={{ backgroundColor: '#e8f4ff', padding: '1rem', borderRadius: '5px' }}>
+        <div>
+          <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>📤 Output</h3>
+          <pre style={{
+            backgroundColor: '#e8f5e9',
+            padding: '10px',
+            borderRadius: '5px',
+            fontSize: '14px'
+          }}>
             <code>
               Enter electricity units consumed: {units}{"\n"}
               Electricity Bill = ₹{bill}

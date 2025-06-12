@@ -66,7 +66,6 @@ import CLayout from './pages/c/CLayout';
 import CIntro from './pages/c/CIntroduction';
 import SwapC from './pages/c/SwapC';
 import EBBill from './pages/c/EBBill';
-import CVariable from './pages/c/CVariable';
 import AddAndMul from './pages/c/AddAndMul';
 import SubAndDiv from './pages/c/SubAndDiv';
 import CIdentifiers from './pages/c/CIdentifiers';
@@ -228,7 +227,7 @@ function App() {
           <Route path="CIntro" element={<CIntro />} />
           <Route path="SwapC" element={<SwapC />} />
           <Route path="EBBill" element={<EBBill />} />
-          <Route path="CVariable" element={<CVariable />} />
+         
           <Route path="AddAndMul" element={<AddAndMul />} />
           <Route path="SubAndDiv" element={<SubAndDiv />} />
           <Route path="CIdentifiers" element={<CIdentifiers />} />

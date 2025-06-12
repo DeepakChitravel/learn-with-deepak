@@ -11,15 +11,79 @@ int main() {
   } while (i <= 3);
   return 0;
 }
-  `;
-  const output = `1\n2\n3`;
+  `.trim();
+
+  const output = `
+1
+2
+3
+  `.trim();
+
+  const points = [
+    { type: 'What is do...while?', detail: 'A looping statement that executes the body at least once before checking the condition.' },
+    { type: 'Post-Test Loop', detail: 'The condition is evaluated *after* executing the block.' },
+    { type: 'Syntax', detail: 'Starts with `do` followed by a block, then `while(condition);`.' },
+    { type: 'Use Case', detail: 'Useful when the loop body must run at least once regardless of the condition.' },
+  ];
 
   return (
-    <div>
-      <h2>do...while in C</h2>
-      <pre>{code}</pre>
-      <h3>Output:</h3>
-      <pre>{output}</pre>
+    <div style={{
+      padding: '30px',
+      background: '#fff',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Title */}
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '20px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        🔁 do...while Loop in C
+      </h2>
+
+      {/* Description */}
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        The <code>do...while</code> loop is a variant of the <code>while</code> loop that guarantees the loop body will execute at least once.
+      </p>
+
+      {/* Key Points */}
+      <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
+        {points.map((point, index) => (
+          <li key={index} style={{ marginBottom: '10px' }}>
+            <strong>{point.type}:</strong> {point.detail}
+          </li>
+        ))}
+      </ul>
+
+      {/* Sample Code */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧪 Sample Code</h3>
+      <pre style={{
+        background: '#1e1e1e',
+        color: '#f8f8f2',
+        padding: '15px',
+        borderRadius: '8px',
+        overflowX: 'auto',
+        fontSize: '14px',
+      }}>
+        <code>{code}</code>
+      </pre>
+
+      {/* Output */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>📤 Output</h3>
+      <pre style={{
+        background: '#e8f5e9',
+        padding: '10px',
+        borderRadius: '5px',
+        fontSize: '14px',
+      }}>
+        <code>{output}</code>
+      </pre>
     </div>
   );
 };

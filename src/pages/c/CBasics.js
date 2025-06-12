@@ -1,13 +1,41 @@
+// src/pages/fundamentals/CBasics.js
+
 import React from 'react';
+
+const sectionHeading = {
+  fontSize: '20px',
+  color: '#1a237e',
+  backgroundColor: '#f0f4ff',
+  borderLeft: '5px solid #3f51b5',
+  padding: '10px 15px',
+  borderRadius: '5px',
+  marginBottom: '15px'
+};
 
 const CBasics = () => {
   return (
-    <div style={{ background: '#fff', padding: '20px', borderRadius: '10px' }}>
-      <h2 style={{ textAlign: 'center' }}>🔍 Basics of C Programming</h2>
+    <div style={{
+      background: '#fff',
+      padding: '30px',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7'
+    }}>
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '30px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        Basics of C Programming
+      </h2>
 
       {/* Constants */}
-      <section style={{ marginBottom: '20px' }}>
-        <h3>🔹 Constants in C</h3>
+      <section style={{ marginBottom: '30px' }}>
+        <h3 style={sectionHeading}>Constants in C</h3>
         <p>
           Constants are fixed values that do not change during the execution of a program. They are also called literals.
         </p>
@@ -17,17 +45,17 @@ const CBasics = () => {
           <li><strong>Floating-point Constants</strong> – e.g., 3.14, -0.0001</li>
           <li><strong>Character Constants</strong> – e.g., 'a', 'Z'</li>
           <li><strong>String Constants</strong> – e.g., "Hello", "123"</li>
-          <li><strong>Enumeration Constants</strong> – e.g., enum day Mon, Tue</li>
+          <li><strong>Enumeration Constants</strong> – e.g., <code>enum day  Mon, Tue </code></li>
         </ul>
       </section>
 
       {/* Static Keyword */}
-      <section style={{ marginBottom: '20px' }}>
-        <h3>🔸 Static Keyword in C</h3>
+      <section style={{ marginBottom: '30px' }}>
+        <h3 style={sectionHeading}>Static Keyword in C</h3>
         <p>
           The <code>static</code> keyword preserves the value of a variable between function calls.
         </p>
-        <pre style={{ background: '#eee', padding: '10px' }}>
+        <pre style={{ background: '#f5f5f5', padding: '10px', borderRadius: '5px' }}>
           <code>
 {`void counter() {
   static int count = 0;
@@ -40,8 +68,8 @@ const CBasics = () => {
       </section>
 
       {/* Programming Errors */}
-      <section style={{ marginBottom: '20px' }}>
-        <h3>⚠️ Programming Errors in C</h3>
+      <section style={{ marginBottom: '30px' }}>
+        <h3 style={sectionHeading}>Programming Errors in C</h3>
         <ul>
           <li><strong>Syntax Error</strong> – Violates grammar of C (e.g., missing semicolon)</li>
           <li><strong>Logical Error</strong> – Code runs but gives wrong result</li>
@@ -51,8 +79,8 @@ const CBasics = () => {
       </section>
 
       {/* Tokens */}
-      <section style={{ marginBottom: '20px' }}>
-        <h3>🔹 Tokens in C Language</h3>
+      <section style={{ marginBottom: '30px' }}>
+        <h3 style={sectionHeading}>Tokens in C Language</h3>
         <p>Tokens are the smallest individual units in a C program.</p>
         <ul>
           <li><strong>Keywords</strong> – e.g., int, return, void</li>
@@ -65,7 +93,7 @@ const CBasics = () => {
 
       {/* Special Symbols */}
       <section>
-        <h3>🔸 Special Symbols in C</h3>
+        <h3 style={sectionHeading}>Special Symbols in C</h3>
         <table border="1" cellPadding="5" style={{ borderCollapse: 'collapse', width: '100%' }}>
           <thead>
             <tr style={{ backgroundColor: '#f2f2f2' }}>

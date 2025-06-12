@@ -1,3 +1,5 @@
+// src/pages/c/CFormatSpecifiers.js
+
 import React from 'react';
 
 const CFormatSpecifiers = () => {
@@ -27,16 +29,35 @@ const CFormatSpecifiers = () => {
   ];
 
   return (
-    <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '10px' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>C Format Specifiers</h2>
-      <p>
-        Format specifiers are used with <code>printf()</code>, <code>scanf()</code>, and similar functions to
-        format the output or input according to the data type.
+    <div style={{
+      backgroundColor: '#ffffff',
+      padding: '30px',
+      fontFamily: 'monospace',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Header */}
+      <h2 style={{
+        color: '#003366',
+        fontSize: '26px',
+        borderBottom: '2px solid #ccc',
+        paddingBottom: '10px',
+        marginBottom: '20px'
+      }}>
+        Format Specifiers in C
+      </h2>
+
+      {/* Introductory Paragraph */}
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        Format specifiers are placeholders used in functions like <code>printf()</code> and <code>scanf()</code> 
+        to define the type of data being printed or read. They ensure correct formatting and interpretation of variables.
       </p>
 
-      <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+      {/* Specifier Table */}
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '15px' }}>
         <thead>
-          <tr style={{ backgroundColor: '#eee' }}>
+          <tr style={{ backgroundColor: '#f0f0f0' }}>
             <th style={{ padding: '10px', border: '1px solid #ccc' }}>Specifier</th>
             <th style={{ padding: '10px', border: '1px solid #ccc' }}>Description</th>
           </tr>

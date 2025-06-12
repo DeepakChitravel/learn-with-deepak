@@ -1,3 +1,5 @@
+// src/pages/c/CKeywords.js
+
 import React from 'react';
 
 const CKeywords = () => {
@@ -13,29 +15,44 @@ const CKeywords = () => {
   ];
 
   return (
-    <div style={{ background: '#fff', padding: '20px', borderRadius: '10px' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Keywords in C Language</h2>
+    <div style={{
+      backgroundColor: '#ffffff',
+      padding: '30px',
+      fontFamily: 'monospace',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Header */}
+      <h2 style={{
+        color: '#003366',
+        fontSize: '26px',
+        borderBottom: '2px solid #ccc',
+        paddingBottom: '10px',
+        marginBottom: '20px'
+      }}>
+        Keywords in C Language
+      </h2>
 
-      <p>
-        C language has a set of <strong>reserved words</strong> known as keywords. These cannot be used as variable
-        names because they serve special purposes in the language syntax.
+      {/* Explanation */}
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        C has a set of <strong>reserved words</strong> called <strong>keywords</strong>, each with a predefined meaning in the compiler. These words cannot be used as variable or function names. They form the basic building blocks of C programming.
       </p>
 
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', 
-        gap: '10px', 
-        marginTop: '20px' 
+      {/* Keyword Grid */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+        gap: '10px'
       }}>
         {keywords.map((word, idx) => (
-          <div 
-            key={idx} 
-            style={{ 
-              backgroundColor: '#f0f0f0', 
-              padding: '10px', 
-              borderRadius: '6px', 
+          <div
+            key={idx}
+            style={{
+              backgroundColor: '#f4f4f4',
+              padding: '10px',
+              borderRadius: '6px',
               textAlign: 'center',
-              fontFamily: 'monospace',
               fontWeight: 'bold'
             }}
           >

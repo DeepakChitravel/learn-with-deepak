@@ -1,62 +1,116 @@
+// src/pages/c/CShortcutKeys.js
+
 import React from 'react';
 
 const CShortcutKeys = () => {
   return (
-    <div style={{ background: '#fff', padding: '20px', borderRadius: '10px' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>⌨️ All C Programming Shortcut Keys</h2>
+    <div style={{
+      background: '#ffffff',
+      padding: '30px',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      fontFamily: 'monospace',
+      lineHeight: '1.7'
+    }}>
+      <h2 style={{
+        textAlign: 'center',
+        marginBottom: '25px',
+        color: '#003366',
+        fontSize: '26px',
+        borderBottom: '2px solid #ccc',
+        paddingBottom: '10px'
+      }}>
+        All C Programming Shortcut Keys
+      </h2>
 
-      <p style={{ marginBottom: '20px' }}>
-        This table lists important shortcut keys used in C programming across Turbo C++, Dev C++, Code::Blocks, and VS Code.
+      <p style={{ marginBottom: '20px', fontSize: '16px' }}>
+        This table lists important shortcut keys used in C programming across <strong>Turbo C++</strong>, <strong>Dev C++</strong>, <strong>Code::Blocks</strong>, and <strong>VS Code</strong>.
       </p>
 
-      <table border="1" cellPadding="10" style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead style={{ backgroundColor: '#eee' }}>
-          <tr>
-            <th>Action</th>
-            <th>Turbo C++</th>
-            <th>Dev C++ / Code::Blocks / VS Code</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>New File</td><td>Ctrl + N</td><td>Ctrl + N</td></tr>
-          <tr><td>Open File</td><td>Ctrl + O</td><td>Ctrl + O</td></tr>
-          <tr><td>Save File</td><td>F2</td><td>Ctrl + S</td></tr>
-          <tr><td>Save As</td><td>Alt + F + A</td><td>Ctrl + Shift + S</td></tr>
-          <tr><td>Exit Editor</td><td>Alt + X</td><td>Alt + F4</td></tr>
-          <tr><td>Cut</td><td>Shift + Del</td><td>Ctrl + X</td></tr>
-          <tr><td>Copy</td><td>Ctrl + Ins</td><td>Ctrl + C</td></tr>
-          <tr><td>Paste</td><td>Shift + Ins</td><td>Ctrl + V</td></tr>
-          <tr><td>Select All</td><td>Alt + A</td><td>Ctrl + A</td></tr>
-          <tr><td>Undo</td><td>Alt + Backspace</td><td>Ctrl + Z</td></tr>
-          <tr><td>Redo</td><td>—</td><td>Ctrl + Y</td></tr>
-          <tr><td>Find</td><td>Ctrl + Q + F</td><td>Ctrl + F</td></tr>
-          <tr><td>Replace</td><td>Ctrl + Q + A</td><td>Ctrl + H</td></tr>
-          <tr><td>Go to Line</td><td>—</td><td>Ctrl + G</td></tr>
-          <tr><td>Comment Line</td><td>—</td><td>Ctrl + /</td></tr>
-          <tr><td>Compile Code</td><td>Alt + F9</td><td>Ctrl + F9 / F9</td></tr>
-          <tr><td>Run Code</td><td>Ctrl + F9</td><td>Ctrl + F10</td></tr>
-          <tr><td>Compile & Run</td><td>Ctrl + F9</td><td>F9</td></tr>
-          <tr><td>Stop Execution</td><td>Ctrl + Break</td><td>Ctrl + Alt + M (in debugger)</td></tr>
-          <tr><td>Close File</td><td>Alt + F + C</td><td>Ctrl + W</td></tr>
-          <tr><td>Print</td><td>Alt + F + P</td><td>Ctrl + P</td></tr>
-          <tr><td>Full Screen</td><td>Alt + Enter</td><td>F11</td></tr>
-          <tr><td>Toggle Sidebar</td><td>—</td><td>Ctrl + B (VS Code)</td></tr>
-          <tr><td>Show Terminal</td><td>—</td><td>Ctrl + `</td></tr>
-          <tr><td>Rename Variable</td><td>—</td><td>F2</td></tr>
-          <tr><td>Auto Complete</td><td>—</td><td>Ctrl + Space</td></tr>
-          <tr><td>Build Project</td><td>Alt + F9</td><td>Ctrl + Shift + B</td></tr>
-          <tr><td>Debug</td><td>—</td><td>F5</td></tr>
-          <tr><td>Step Over</td><td>—</td><td>F10</td></tr>
-          <tr><td>Step Into</td><td>—</td><td>F11</td></tr>
-          <tr><td>Step Out</td><td>—</td><td>Shift + F11</td></tr>
-        </tbody>
-      </table>
+      <div style={{ overflowX: 'auto' }}>
+        <table style={{
+          width: '100%',
+          borderCollapse: 'collapse',
+          textAlign: 'left',
+          fontSize: '14px'
+        }}>
+          <thead style={{ backgroundColor: '#f0f0f0' }}>
+            <tr>
+              <th style={styles.th}>Action</th>
+              <th style={styles.th}>Turbo C++</th>
+              <th style={styles.th}>Dev C++ / Code::Blocks / VS Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            {shortcutData.map((row, index) => (
+              <tr key={index} style={{ borderBottom: '1px solid #ddd' }}>
+                <td style={styles.td}>{row.action}</td>
+                <td style={styles.td}>{row.turbo}</td>
+                <td style={styles.td}>{row.modern}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      <p style={{ marginTop: '20px', fontStyle: 'italic' }}>
+      <p style={{
+        marginTop: '25px',
+        fontStyle: 'italic',
+        background: '#f9f9f9',
+        padding: '10px',
+        borderRadius: '6px',
+        color: '#2e7d32'
+      }}>
         💡 Tip: Mastering shortcut keys improves your programming speed and productivity!
       </p>
     </div>
   );
 };
+
+const styles = {
+  th: {
+    padding: '12px',
+    borderBottom: '2px solid #ccc',
+    fontWeight: 'bold'
+  },
+  td: {
+    padding: '10px',
+    verticalAlign: 'top'
+  }
+};
+
+const shortcutData = [
+  { action: 'New File', turbo: 'Ctrl + N', modern: 'Ctrl + N' },
+  { action: 'Open File', turbo: 'Ctrl + O', modern: 'Ctrl + O' },
+  { action: 'Save File', turbo: 'F2', modern: 'Ctrl + S' },
+  { action: 'Save As', turbo: 'Alt + F + A', modern: 'Ctrl + Shift + S' },
+  { action: 'Exit Editor', turbo: 'Alt + X', modern: 'Alt + F4' },
+  { action: 'Cut', turbo: 'Shift + Del', modern: 'Ctrl + X' },
+  { action: 'Copy', turbo: 'Ctrl + Ins', modern: 'Ctrl + C' },
+  { action: 'Paste', turbo: 'Shift + Ins', modern: 'Ctrl + V' },
+  { action: 'Select All', turbo: 'Alt + A', modern: 'Ctrl + A' },
+  { action: 'Undo', turbo: 'Alt + Backspace', modern: 'Ctrl + Z' },
+  { action: 'Redo', turbo: '—', modern: 'Ctrl + Y' },
+  { action: 'Find', turbo: 'Ctrl + Q + F', modern: 'Ctrl + F' },
+  { action: 'Replace', turbo: 'Ctrl + Q + A', modern: 'Ctrl + H' },
+  { action: 'Go to Line', turbo: '—', modern: 'Ctrl + G' },
+  { action: 'Comment Line', turbo: '—', modern: 'Ctrl + /' },
+  { action: 'Compile Code', turbo: 'Alt + F9', modern: 'Ctrl + F9 / F9' },
+  { action: 'Run Code', turbo: 'Ctrl + F9', modern: 'Ctrl + F10' },
+  { action: 'Compile & Run', turbo: 'Ctrl + F9', modern: 'F9' },
+  { action: 'Stop Execution', turbo: 'Ctrl + Break', modern: 'Ctrl + Alt + M (in debugger)' },
+  { action: 'Close File', turbo: 'Alt + F + C', modern: 'Ctrl + W' },
+  { action: 'Print', turbo: 'Alt + F + P', modern: 'Ctrl + P' },
+  { action: 'Full Screen', turbo: 'Alt + Enter', modern: 'F11' },
+  { action: 'Toggle Sidebar', turbo: '—', modern: 'Ctrl + B (VS Code)' },
+  { action: 'Show Terminal', turbo: '—', modern: 'Ctrl + `' },
+  { action: 'Rename Variable', turbo: '—', modern: 'F2' },
+  { action: 'Auto Complete', turbo: '—', modern: 'Ctrl + Space' },
+  { action: 'Build Project', turbo: 'Alt + F9', modern: 'Ctrl + Shift + B' },
+  { action: 'Debug', turbo: '—', modern: 'F5' },
+  { action: 'Step Over', turbo: '—', modern: 'F10' },
+  { action: 'Step Into', turbo: '—', modern: 'F11' },
+  { action: 'Step Out', turbo: '—', modern: 'Shift + F11' }
+];
 
 export default CShortcutKeys;
