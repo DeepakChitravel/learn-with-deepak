@@ -104,6 +104,24 @@ import CSubMulDiv from './pages/c/CSubMulDiv';
 import CVariables from './pages/c/CVaribles';
 import CBasics from './pages/c/CBasics';
 import VariableTypes from './pages/c/VariableTypes';
+import Break from './pages/c/Break';
+import Char from './pages/c/Char';
+import Const from './pages/c/Const';
+import Continue from './pages/c/Continue';
+import Default from './pages/c/Default';
+import Extern from './pages/c/Extern';
+import Enum from './pages/c/Enum';
+import Do from './pages/c/Do';
+import Else from './pages/c/Else';
+import Double from './pages/c/Double';
+import Arithmetic from './pages/c/Arithmetic';
+import Logical from './pages/c/Logical';
+import Bitwise from './pages/c/Bitwise';
+import Relational from './pages/c/Relational';
+import IncrementDecrement from './pages/c/IncrementDecrement';
+import Ternary from './pages/c/Ternary';
+import Unary from './pages/c/Unary';
+import Assignment from './pages/c/Assignment';
 
 function App() {  
   return (
@@ -226,7 +244,25 @@ function App() {
           <Route path="CSubMulDiv" element={<CSubMulDiv />} />
           <Route path="CVariables" element={<CVariables />} />
           <Route path="CBasics" element={<CBasics />} />
+          <Route path="Break" element={<Break />} />
+          <Route path="Char" element={<Char />} />
           <Route path="VariableTypes" element={<VariableTypes />} />
+          <Route path="Const" element={<Const />} />
+          <Route path="Continue" element={<Continue />} />
+          <Route path="Default" element={<Default />} />
+          <Route path="Do" element={<Do />} />
+          <Route path="Double" element={<Double />} />
+          <Route path="Else" element={<Else />} />
+          <Route path="Enum" element={<Enum />} />
+          <Route path="Arithmetic" element={<Arithmetic />} />
+          <Route path="Bitwise" element={<Bitwise />} />
+          <Route path="Logical" element={<Logical />} />
+          <Route path="Relational" element={<Relational />} />
+          <Route path="IncrementDecrement" element={<IncrementDecrement />} />
+          <Route path="Ternary" element={<Ternary />} />
+          <Route path="Extern" element={<Extern />} />
+          <Route path="Unary" element={<Unary />} />
+          <Route path="Assignment" element={<Assignment />} />
         </Route>
 
       </Routes>
