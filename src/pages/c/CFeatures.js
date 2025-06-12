@@ -1,19 +1,34 @@
+// src/pages/fundamentals/CFeatures.js
 import React from 'react';
 
 const CFeatures = () => {
+  const features = [
+    { title: 'Simple and Easy to Learn', desc: 'C has a small set of keywords and a straightforward syntax, making it beginner-friendly.' },
+    { title: 'Structured Language', desc: 'Supports modular programming using functions and blocks.' },
+    { title: 'Portable', desc: 'C programs can run on various hardware with little to no modification.' },
+    { title: 'Fast and Efficient', desc: 'Provides low-level memory access and minimal runtime overhead.' },
+    { title: 'Rich Library', desc: 'Comes with a wide range of built-in functions and header files.' },
+    { title: 'Middle-Level Language', desc: 'Combines the features of both high-level and low-level programming.' },
+    { title: 'Memory Management', desc: 'Allows direct memory access and dynamic memory allocation using pointers.' },
+    { title: 'Extensible', desc: 'Users can define their own functions to add new capabilities.' },
+    { title: 'Recursion', desc: 'Supports recursive function calls, enabling elegant solutions to complex problems.' },
+    { title: 'Compiler-Based', desc: 'Being compiled allows C to execute faster than interpreted languages.' },
+    { title: 'Widely Used', desc: 'Forms the base for many modern programming languages like C++, Java, and Python.' }
+  ];
+
   return (
     <div style={{
-      background: '#fff',
       padding: '30px',
+      background: '#fff',
       borderRadius: '10px',
-      fontFamily: 'Segoe UI, sans-serif',
+      fontFamily: 'monospace',
       boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-      lineHeight: '1.8'
+      lineHeight: '1.7'
     }}>
       <h2 style={{
         textAlign: 'center',
         fontSize: '26px',
-        marginBottom: '25px',
+        marginBottom: '20px',
         color: '#003366',
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
@@ -21,18 +36,12 @@ const CFeatures = () => {
         Features of C Language
       </h2>
 
-      <ul style={{ fontSize: '16px', paddingLeft: '20px' }}>
-        <li><strong>Simple and Easy to Learn:</strong> C has a small set of keywords and a simple syntax.</li>
-        <li><strong>Structured Language:</strong> C uses functions and blocks to divide code, making it modular.</li>
-        <li><strong>Portable:</strong> C programs can be compiled and run on different machines with minimal changes.</li>
-        <li><strong>Fast and Efficient:</strong> Provides low-level memory access and optimized performance.</li>
-        <li><strong>Rich Library:</strong> Comes with many built-in functions and header files.</li>
-        <li><strong>Middle-Level Language:</strong> Combines features of high-level and low-level languages.</li>
-        <li><strong>Memory Management:</strong> Offers direct memory access via pointers and dynamic allocation.</li>
-        <li><strong>Extensible:</strong> Allows creation of user-defined functions to enhance functionality.</li>
-        <li><strong>Recursion:</strong> Supports functions that call themselves to solve problems efficiently.</li>
-        <li><strong>Compiler-Based:</strong> Being compiled makes C faster than interpreted languages.</li>
-        <li><strong>Widely Used:</strong> Acts as a foundation for many modern languages like C++, Java, and Python.</li>
+      <ul style={{ fontSize: '16px', paddingLeft: '20px', marginTop: '10px' }}>
+        {features.map((item, index) => (
+          <li key={index} style={{ marginBottom: '12px' }}>
+            <strong>{item.title}:</strong> {item.desc}
+          </li>
+        ))}
       </ul>
     </div>
   );

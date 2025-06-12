@@ -3,13 +3,14 @@ import React from 'react';
 const Do = () => {
   const code = `
 #include <stdio.h>
+
 int main() {
-  int i = 1;
-  do {
-    printf("%d\\n", i);
-    i++;
-  } while (i <= 3);
-  return 0;
+    int i = 1;
+    do {
+        printf("%d\\n", i);
+        i++;
+    } while (i <= 3);
+    return 0;
 }
   `.trim();
 
@@ -22,7 +23,7 @@ int main() {
   const points = [
     { type: 'What is do...while?', detail: 'A looping statement that executes the body at least once before checking the condition.' },
     { type: 'Post-Test Loop', detail: 'The condition is evaluated *after* executing the block.' },
-    { type: 'Syntax', detail: 'Starts with `do` followed by a block, then `while(condition);`.' },
+    { type: 'Syntax', detail: 'Starts with \`do\` followed by a block, then \`while(condition);\`.' },
     { type: 'Use Case', detail: 'Useful when the loop body must run at least once regardless of the condition.' },
   ];
 
@@ -44,12 +45,12 @@ int main() {
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        🔁 do...while Loop in C
+        🔄 do...while Loop in C
       </h2>
 
       {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        The <code>do...while</code> loop is a variant of the <code>while</code> loop that guarantees the loop body will execute at least once.
+        The <code>do...while</code> loop ensures the code block runs at least once before checking the condition. It's useful when the body must execute regardless of the test.
       </p>
 
       {/* Key Points */}
@@ -61,20 +62,21 @@ int main() {
         ))}
       </ul>
 
-      {/* Sample Code */}
+      {/* Code Block */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧪 Sample Code</h3>
-      <pre style={{
-        background: '#1e1e1e',
-        color: '#f8f8f2',
-        padding: '15px',
-        borderRadius: '8px',
-        overflowX: 'auto',
-        fontSize: '14px',
-      }}>
-        <code>{code}</code>
-      </pre>
+     <pre style={{
+  background: '#1e1e1e',  // This is the black/dark background
+  color: '#f8f8f2',        // This is light-colored text (like VS Code theme)
+  padding: '15px',
+  borderRadius: '8px',
+  overflowX: 'auto',
+  fontSize: '14px',
+}}>
+  <code>{code}</code>
+</pre>
 
-      {/* Output */}
+
+      {/* Output Block */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>📤 Output</h3>
       <pre style={{
         background: '#e8f5e9',

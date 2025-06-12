@@ -3,23 +3,26 @@ import React from 'react';
 const Else = () => {
   const code = `
 #include <stdio.h>
+
 int main() {
-  int x = 5;
-  if (x > 10)
-    printf("Greater");
-  else
-    printf("Smaller");
-  return 0;
+    int x = 5;
+    if (x > 10)
+        printf("Greater");
+    else
+        printf("Smaller");
+    return 0;
 }
   `.trim();
 
-  const output = `Smaller`;
+  const output = `
+Smaller
+  `.trim();
 
   const points = [
     { type: 'What is else?', detail: 'The else statement provides an alternative block of code if the if condition is false.' },
     { type: 'Execution Flow', detail: 'If the condition is false, the else block runs.' },
     { type: 'Syntax', detail: 'Used with if to handle false conditions explicitly.' },
-    { type: 'Braces', detail: 'Braces `{}` are optional for a single statement but recommended.' },
+    { type: 'Braces', detail: 'Braces `{}` are optional for a single statement but recommended for clarity and safety.' },
   ];
 
   return (
@@ -45,7 +48,7 @@ int main() {
 
       {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        The <code>else</code> statement is used when you want to execute a block of code if the <code>if</code> condition evaluates to false.
+        The <code>else</code> statement is used to execute an alternative block of code when the <code>if</code> condition evaluates to false.
       </p>
 
       {/* Key Points */}
@@ -57,26 +60,24 @@ int main() {
         ))}
       </ul>
 
-      {/* Sample Code */}
-      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧪 Sample Code</h3>
+      {/* Code Example */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Example Code</h3>
       <pre style={{
-        background: '#1e1e1e',
-        color: '#f8f8f2',
+        background: '#f4f4f4',
         padding: '15px',
-        borderRadius: '8px',
-        overflowX: 'auto',
-        fontSize: '14px',
+        borderRadius: '5px',
+        overflowX: 'auto'
       }}>
         <code>{code}</code>
       </pre>
 
       {/* Output */}
-      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>📤 Output</h3>
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
       <pre style={{
         background: '#e8f5e9',
         padding: '10px',
         borderRadius: '5px',
-        fontSize: '14px',
+        fontSize: '14px'
       }}>
         <code>{output}</code>
       </pre>

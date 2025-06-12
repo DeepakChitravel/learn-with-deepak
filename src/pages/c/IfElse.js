@@ -1,23 +1,33 @@
 import React from 'react';
 
-const Double = () => {
+const IfElse = () => {
   const code = `
 #include <stdio.h>
 
 int main() {
-    double pi = 3.14159;
-    printf("%lf", pi);
+    int number = 10;
+
+    if (number > 0) {
+        printf("Number is positive.\\n");
+    } else {
+        printf("Number is not positive.\\n");
+    }
+
     return 0;
 }
   `.trim();
 
-  const output = `3.141590`;
+  const output = `
+Number is positive.
+  `.trim();
 
   const points = [
-    { type: 'What is double?', detail: 'A data type in C used to store floating-point numbers with double precision.' },
-    { type: 'Size', detail: 'Typically occupies 8 bytes in memory (may vary depending on system).' },
-    { type: 'Precision', detail: 'Can store up to 15-16 digits after the decimal point.' },
-    { type: 'Format Specifier', detail: 'Use `%lf` in `printf()` to display a double value.' },
+    { type: 'What is if...else?', detail: 'A control structure used to execute a block of code based on a condition.' },
+    { type: 'if block', detail: 'Executes if the condition evaluates to true.' },
+    { type: 'else block', detail: 'Executes if the condition evaluates to false.' },
+    { type: 'Syntax', detail: 'if (condition) { /* true block */ } else { /* false block */ }' },
+    { type: 'Multiple Conditions', detail: 'Use else if to check multiple conditions.' },
+    { type: 'Use Case', detail: 'Commonly used in decision-making like comparing numbers, checking status, etc.' },
   ];
 
   return (
@@ -38,16 +48,15 @@ int main() {
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        double in C
+        🔀 if...else in C
       </h2>
 
       {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        The <code>double</code> keyword in C defines a variable that holds a floating-point number with **double precision**.
-        It is used when more precision than <code>float</code> is needed for calculations.
+        The <code>if...else</code> statement in C is used for conditional execution of code blocks based on whether a condition evaluates to true or false.
       </p>
 
-      {/* Key Points */}
+      {/* Points */}
       <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
         {points.map((point, index) => (
           <li key={index} style={{ marginBottom: '10px' }}>
@@ -80,4 +89,4 @@ int main() {
   );
 };
 
-export default Double;
+export default IfElse;

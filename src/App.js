@@ -121,6 +121,7 @@ import IncrementDecrement from './pages/c/IncrementDecrement';
 import Ternary from './pages/c/Ternary';
 import Unary from './pages/c/Unary';
 import Assignment from './pages/c/Assignment';
+import IfElse from './pages/c/IfElse';
 
 function App() {  
   return (
@@ -227,7 +228,7 @@ function App() {
           <Route path="CIntro" element={<CIntro />} />
           <Route path="SwapC" element={<SwapC />} />
           <Route path="EBBill" element={<EBBill />} />
-         
+          <Route path="IfElse" element={<IfElse />} />
           <Route path="AddAndMul" element={<AddAndMul />} />
           <Route path="SubAndDiv" element={<SubAndDiv />} />
           <Route path="CIdentifiers" element={<CIdentifiers />} />

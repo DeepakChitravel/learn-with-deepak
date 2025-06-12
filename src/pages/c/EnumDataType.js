@@ -63,12 +63,12 @@ All weekdays:
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        🧾 Enumeration (enum) in C
+        enum in C
       </h2>
 
       {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        <code>enum</code> is a user-defined type in C used to assign names to integral constants to make code more readable and manageable.
+        The <code>enum</code> keyword in C is used to create a set of named integer constants, helping to make the code more understandable and easier to manage.
       </p>
 
       {/* Key Points */}
@@ -80,21 +80,20 @@ All weekdays:
         ))}
       </ul>
 
-      {/* Code Example */}
-      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧪 Sample Code</h3>
+      {/* Code Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Example Code</h3>
       <pre style={{
-        background: '#1e1e1e',
-        color: '#f8f8f2',
+        background: '#f4f4f4',
         padding: '15px',
-        borderRadius: '8px',
+        borderRadius: '5px',
         overflowX: 'auto',
         fontSize: '14px',
       }}>
         <code>{code}</code>
       </pre>
 
-      {/* Output */}
-      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>📤 Output</h3>
+      {/* Output Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
       <pre style={{
         background: '#e8f5e9',
         padding: '10px',
