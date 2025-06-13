@@ -39,6 +39,14 @@ const CSidebar = () => {
     { path: '/c/EBBill', name: 'C EB-Bill' },
     { path: '/c/AddAndMul', name: 'C Add and Mul' },
     { path: '/c/SubAndDiv', name: 'C Sub and Div' },
+    { path: '/c/Boolean', name: 'C Boolean' },
+    { path: '/c/AutoVariable', name: 'C Auto Variable' },
+    { path: '/c/ExternVariable', name: 'C Extern Variable' },
+    { path: '/c/COperators', name: 'C Operators' },
+    { path: '/c/MiscOperators', name: 'C MiscOperators' },
+    { path: '/c/ControlStatementIntro', name: 'C ControlStatementIntro' },
+    { path: '/c/IfStatement', name: 'C IfStatement' },
+    { path: '/c/IfElseStatement', name: 'C IfElseStatement' },
     
   ];
 

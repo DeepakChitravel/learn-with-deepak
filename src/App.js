@@ -122,7 +122,14 @@ import Ternary from './pages/c/Ternary';
 import Unary from './pages/c/Unary';
 import Assignment from './pages/c/Assignment';
 import IfElse from './pages/c/IfElse';
-
+import Boolean from './pages/c/Boolean';
+import AutoVariable from './pages/c/AutoVariable';
+import ExternVariable from './pages/c/ExternVariable';
+import COperators from './pages/c/COperators';
+import MiscOperator from './pages/c/MiscOperators';
+import ControlStatementIntro from './pages/c/ControlStatementIntro';
+import IfStatement from './pages/c/IfStatement';
+import IfElseStatement from './pages/c/IfElseStatement';
 function App() {  
   return (
     <BrowserRouter>
@@ -263,6 +270,14 @@ function App() {
           <Route path="Extern" element={<Extern />} />
           <Route path="Unary" element={<Unary />} />
           <Route path="Assignment" element={<Assignment />} />
+          <Route path="Boolean" element={<Boolean />} />
+          <Route path="AutoVariable" element={<AutoVariable />} />
+          <Route path="ExternVariable" element={<ExternVariable />} />
+          <Route path="COperators" element={<COperators />} />
+          <Route path="MiscOperators" element={<MiscOperator />} />
+          <Route path="ControlStatementIntro" element={<ControlStatementIntro />} />
+          <Route path="IfStatement" element={<IfStatement />} />
+          <Route path="IfElseStatement" element={<IfElseStatement />} />
         </Route>
 
       </Routes>

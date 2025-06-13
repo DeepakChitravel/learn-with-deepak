@@ -1,30 +1,32 @@
 import React from 'react';
 
-const Do = () => {
+const Boolean = () => {
   const code = `
 #include <stdio.h>
+#include <stdbool.h>
 
 int main() {
-    int i = 1;
-    do {
-        printf("%d\\n", i);
-        i++;
-    } while (i <= 3);
+    bool isRaining = true;
+
+    if (isRaining) {
+        printf("Take an umbrella!\\n");
+    } else {
+        printf("Enjoy the sunshine!\\n");
+    }
+
     return 0;
 }
   `.trim();
 
   const output = `
-1
-2
-3
+Take an umbrella!
   `.trim();
 
   const points = [
-    { type: 'What is do...while?', detail: 'A looping statement that executes the body at least once before checking the condition.' },
-    { type: 'Post-Test Loop', detail: 'The condition is evaluated after executing the block.' },
-    { type: 'Syntax', detail: 'Starts with `do` followed by a block, then `while(condition);`.' },
-    { type: 'Use Case', detail: 'Useful when the loop body must run at least once regardless of the condition.' },
+    { type: 'Header File', detail: '`stdbool.h` enables usage of `bool`, `true`, and `false` in C.' },
+    { type: 'Boolean Type', detail: '`bool` is an alias for `_Bool` and holds either `true` or `false`.' },
+    { type: 'Usage', detail: 'Commonly used in conditions, comparisons, and flags in programs.' },
+    { type: 'Example', detail: 'A `bool` variable `isRaining` determines which message to print.' },
   ];
 
   return (
@@ -47,19 +49,19 @@ int main() {
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        do...while Loop in C
+        ✅ Boolean Type in C
       </h2>
 
       {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        The <code>do...while</code> loop ensures the code block runs at least once before checking the condition.
-        It's especially helpful when an operation must occur at least once regardless of the condition.
+        C doesn’t have a built-in boolean type by default, but by including <code>&lt;stdbool.h&gt;</code>,
+        we can use the `bool` type and values like `true` and `false`.
       </p>
 
       {/* Key Points */}
       <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
-        {points.map((point, index) => (
-          <li key={index} style={{ marginBottom: '10px' }}>
+        {points.map((point, idx) => (
+          <li key={idx} style={{ marginBottom: '10px' }}>
             <strong>{point.type}:</strong> {point.detail}
           </li>
         ))}
@@ -78,7 +80,7 @@ int main() {
         <code>{code}</code>
       </pre>
 
-      {/* Output Block */}
+      {/* Output */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
       <pre style={{
         background: '#e8f5e9',
@@ -92,4 +94,4 @@ int main() {
   );
 };
 
-export default Do;
+export default Boolean;

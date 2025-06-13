@@ -1,30 +1,34 @@
 import React from 'react';
 
-const Do = () => {
+const AutoVariable = () => {
   const code = `
 #include <stdio.h>
 
+void showCount() {
+    auto int count = 0;  // auto is optional in modern C
+    count++;
+    printf("Count = %d\\n", count);
+}
+
 int main() {
-    int i = 1;
-    do {
-        printf("%d\\n", i);
-        i++;
-    } while (i <= 3);
+    showCount();
+    showCount();
+    showCount();
     return 0;
 }
   `.trim();
 
   const output = `
-1
-2
-3
+Count = 1
+Count = 1
+Count = 1
   `.trim();
 
   const points = [
-    { type: 'What is do...while?', detail: 'A looping statement that executes the body at least once before checking the condition.' },
-    { type: 'Post-Test Loop', detail: 'The condition is evaluated after executing the block.' },
-    { type: 'Syntax', detail: 'Starts with `do` followed by a block, then `while(condition);`.' },
-    { type: 'Use Case', detail: 'Useful when the loop body must run at least once regardless of the condition.' },
+    { type: 'What is an Automatic Variable?', detail: 'A local variable that is automatically created when the function is called and destroyed when the function exits.' },
+    { type: 'Storage Class', detail: 'The `auto` keyword indicates automatic storage duration (default for local variables).' },
+    { type: 'Scope', detail: 'Only accessible within the block where it’s defined.' },
+    { type: 'Behavior', detail: 'It resets every time the function is called.' },
   ];
 
   return (
@@ -38,7 +42,6 @@ int main() {
       maxWidth: '800px',
       margin: 'auto'
     }}>
-      {/* Title */}
       <h2 style={{
         textAlign: 'center',
         fontSize: '26px',
@@ -47,38 +50,32 @@ int main() {
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        do...while Loop in C
+        🔄 Automatic Variable in C
       </h2>
 
-      {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        The <code>do...while</code> loop ensures the code block runs at least once before checking the condition.
-        It's especially helpful when an operation must occur at least once regardless of the condition.
+        Automatic variables are local to the function and automatically created/destroyed. By default, all local variables are automatic.
       </p>
 
-      {/* Key Points */}
       <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
-        {points.map((point, index) => (
-          <li key={index} style={{ marginBottom: '10px' }}>
+        {points.map((point, idx) => (
+          <li key={idx} style={{ marginBottom: '10px' }}>
             <strong>{point.type}:</strong> {point.detail}
           </li>
         ))}
       </ul>
 
-      {/* Code Block */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Example Code</h3>
       <pre style={{
         background: '#f4f4f4',
         padding: '15px',
         borderRadius: '5px',
         overflowX: 'auto',
-        fontSize: '14px',
-        whiteSpace: 'pre-wrap'
+        fontSize: '14px'
       }}>
         <code>{code}</code>
       </pre>
 
-      {/* Output Block */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
       <pre style={{
         background: '#e8f5e9',
@@ -92,4 +89,4 @@ int main() {
   );
 };
 
-export default Do;
+export default AutoVariable;

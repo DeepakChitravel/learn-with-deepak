@@ -65,23 +65,22 @@ int main() {
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        💡 Electricity Bill Calculator in C & React
+        💡 Electricity Bill Calculator (C & React)
       </h2>
 
-      {/* C Code Section */}
+      {/* C Code */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>📄 C Program Code</h3>
       <pre style={{
-        background: '#1e1e1e',
-        color: '#f8f8f2',
+        background: '#f4f4f4',
         padding: '15px',
-        borderRadius: '8px',
+        borderRadius: '5px',
         overflowX: 'auto',
         fontSize: '14px'
       }}>
         <code>{cCode}</code>
       </pre>
 
-      {/* React Form Section */}
+      {/* React Input Section */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '30px', marginBottom: '10px' }}>⚙️ Try It Yourself</h3>
       <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
         <label htmlFor="units" style={{ display: 'block', marginBottom: '8px' }}>
@@ -96,21 +95,22 @@ int main() {
           required
           style={{
             padding: '8px 12px',
-            borderRadius: '4px',
+            borderRadius: '5px',
             border: '1px solid #ccc',
-            marginBottom: '10px',
             width: '100%',
-            fontFamily: 'monospace'
+            fontFamily: 'monospace',
+            fontSize: '14px'
           }}
         />
         <button type="submit" style={{
-          backgroundColor: '#007bff',
+          backgroundColor: '#0066cc',
           color: '#fff',
           padding: '8px 16px',
           border: 'none',
-          borderRadius: '4px',
+          borderRadius: '5px',
           cursor: 'pointer',
-          fontFamily: 'monospace'
+          marginTop: '10px',
+          fontSize: '14px'
         }}>
           Calculate Bill
         </button>

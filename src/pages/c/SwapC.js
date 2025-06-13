@@ -46,11 +46,13 @@ b = 10
   return (
     <div style={{
       padding: '30px',
-      background: '#ffffff',
+      background: '#fff',
       borderRadius: '10px',
       fontFamily: 'monospace',
       boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-      lineHeight: '1.7'
+      lineHeight: '1.7',
+      maxWidth: '800px',
+      margin: 'auto'
     }}>
       {/* Title */}
       <h2 style={{
@@ -61,15 +63,15 @@ b = 10
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        🔁 Swapping Two Numbers in C
+        Swapping Two Numbers in C
       </h2>
 
       {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        This program demonstrates how to swap two numbers using a temporary variable in C.
+        This C program demonstrates how to swap two integers using a temporary variable.
       </p>
 
-      {/* Info Points */}
+      {/* Key Points */}
       <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
         {points.map((point, idx) => (
           <li key={idx} style={{ marginBottom: '10px' }}>
@@ -79,20 +81,20 @@ b = 10
       </ul>
 
       {/* Code Block */}
-      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧪 Sample Code</h3>
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Example Code</h3>
       <pre style={{
-        background: '#1e1e1e',
-        color: '#f4f4f4',
+        background: '#f4f4f4',
         padding: '15px',
-        borderRadius: '8px',
+        borderRadius: '5px',
         overflowX: 'auto',
-        fontSize: '14px'
+        fontSize: '14px',
+        whiteSpace: 'pre-wrap'
       }}>
         <code>{code}</code>
       </pre>
 
       {/* Output */}
-      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>📤 Output</h3>
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
       <pre style={{
         background: '#e8f5e9',
         padding: '10px',

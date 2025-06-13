@@ -1,30 +1,38 @@
 import React from 'react';
 
-const Do = () => {
+const ExternVariable = () => {
   const code = `
+// File: main.c
 #include <stdio.h>
 
+extern int count;  // Declaration of external variable
+
+void showCount() {
+    count++;
+    printf("Count = %d\\n", count);
+}
+
+int count = 0;  // Definition of external variable
+
 int main() {
-    int i = 1;
-    do {
-        printf("%d\\n", i);
-        i++;
-    } while (i <= 3);
+    showCount();
+    showCount();
+    showCount();
     return 0;
 }
   `.trim();
 
   const output = `
-1
-2
-3
+Count = 1
+Count = 2
+Count = 3
   `.trim();
 
   const points = [
-    { type: 'What is do...while?', detail: 'A looping statement that executes the body at least once before checking the condition.' },
-    { type: 'Post-Test Loop', detail: 'The condition is evaluated after executing the block.' },
-    { type: 'Syntax', detail: 'Starts with `do` followed by a block, then `while(condition);`.' },
-    { type: 'Use Case', detail: 'Useful when the loop body must run at least once regardless of the condition.' },
+    { type: 'What is an External Variable?', detail: 'A variable defined outside of any function and accessible globally across multiple files (if declared with `extern`).' },
+    { type: 'Declaration', detail: 'The `extern` keyword is used to declare a global variable from another file or scope.' },
+    { type: 'Scope', detail: 'Global scope across the entire program.' },
+    { type: 'Use Case', detail: 'Used to share variables between different C source files.' },
   ];
 
   return (
@@ -38,7 +46,6 @@ int main() {
       maxWidth: '800px',
       margin: 'auto'
     }}>
-      {/* Title */}
       <h2 style={{
         textAlign: 'center',
         fontSize: '26px',
@@ -47,38 +54,32 @@ int main() {
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        do...while Loop in C
+        🌐 External Variable in C
       </h2>
 
-      {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        The <code>do...while</code> loop ensures the code block runs at least once before checking the condition.
-        It's especially helpful when an operation must occur at least once regardless of the condition.
+        External variables are defined outside of all functions and can be accessed across multiple files using the <code>extern</code> keyword.
       </p>
 
-      {/* Key Points */}
       <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
-        {points.map((point, index) => (
-          <li key={index} style={{ marginBottom: '10px' }}>
+        {points.map((point, idx) => (
+          <li key={idx} style={{ marginBottom: '10px' }}>
             <strong>{point.type}:</strong> {point.detail}
           </li>
         ))}
       </ul>
 
-      {/* Code Block */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Example Code</h3>
       <pre style={{
         background: '#f4f4f4',
         padding: '15px',
         borderRadius: '5px',
         overflowX: 'auto',
-        fontSize: '14px',
-        whiteSpace: 'pre-wrap'
+        fontSize: '14px'
       }}>
         <code>{code}</code>
       </pre>
 
-      {/* Output Block */}
       <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
       <pre style={{
         background: '#e8f5e9',
@@ -92,4 +93,4 @@ int main() {
   );
 };
 
-export default Do;
+export default ExternVariable;
