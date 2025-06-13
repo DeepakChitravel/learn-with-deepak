@@ -154,9 +154,12 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
+
+ <Route path="/" element={<HTMLLayout />}></Route>
+
+        
  <Route path="/javascript" element={<JavaScriptLayout />}>
  </Route>
-
         <Route path="/course" element={<ApplicationCourse />} />
         {/* Nested Routes under /fundamentals */}
         <Route path="/fundamentals" element={<FundamentalsLayout />}>
