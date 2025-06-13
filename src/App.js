@@ -23,12 +23,12 @@ import Ribbon from './pages/msoffice/Ribbon';
 import DataEntry from './pages/msoffice/DataEntry';
 import { HLOOKUP } from './pages/msoffice/HLookup';
 import { VLOOKUP } from './pages/msoffice/VLookup';
-import { ConditionalFormatting } from './pages/msoffice/ConditionalFormatting';
+import  ConditionalFormatting  from './pages/msoffice/ConditionalFormatting';
 import { FlashFill } from './pages/msoffice/FlashFill';
 import SumSeries from './pages/msoffice/SumSeries';
 import ExcelChartPivot from './pages/msoffice/ExcelChartPivot';
 import HTMLLayout from './pages/html/HTMLLayout';
-import Introduction from './pages/html/Introduction';
+import HTMLIntroduction from './pages/html/HTMLIntroduction';
 import TagExample from './pages/html/TagExample';
 import FontSizeTag from './pages/html/FontSizeTag';
 import BasicTags from './pages/html/BasicTags';
@@ -184,8 +184,8 @@ function App() {
         </Route>
 
         <Route path="/html" element={<HTMLLayout />}>
-        <Route index element={<Introduction />} />
-          <Route path="introduction" element={<Introduction />} />
+        <Route index element={<HTMLIntroduction />} />
+          <Route path="HTMLIntroduction" element={<HTMLIntroduction />} />
           <Route path="TagExample" element={<TagExample />} />
           <Route path="FontSizeTag" element={<FontSizeTag />} />
           <Route path="BasicTags" element={<BasicTags />} />

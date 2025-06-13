@@ -1,6 +1,8 @@
 import React from 'react';
 
-const marksheetCode = `<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: center;">
+const MarksheetTable = () => {
+  const code = `
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: center;">
   <thead>
     <tr style="background-color: #f4b400;">
       <th rowspan="2" style="width: 100px;">Roll No</th>
@@ -40,43 +42,74 @@ const marksheetCode = `<table border="1" cellpadding="10" cellspacing="0" style=
       <td>276</td>
     </tr>
   </tbody>
-</table>`;
+</table>
+  `.trim();
 
-const MarksheetTable = () => {
+  const points = [
+    { type: 'Rowspan', detail: 'Used to merge cells vertically across rows using the `rowspan` attribute.' },
+    { type: 'Colspan', detail: 'Used to merge cells horizontally across columns using the `colspan` attribute.' },
+    { type: 'Styling Tables', detail: 'Inline styles add colors, spacing, and borders for visual enhancement.' },
+    { type: 'Border Collapse', detail: '`border-collapse: collapse;` merges table borders cleanly into single lines.' },
+    { type: 'Cell Alignment', detail: 'The `text-align: center;` aligns content in cells centrally.' },
+  ];
+
   return (
-    <div style={{ fontFamily: 'Segoe UI, sans-serif', padding: '30px' }}>
-      <h2>📋 HTML Table with Rowspan, Colspan, Height, Width & Colors</h2>
-      <p>This sample shows a student marksheet using rowspan and colspan with styling.</p>
+    <div style={{
+      padding: '30px',
+      background: '#fff',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Title */}
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '20px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        📋 HTML Table: Rowspan, Colspan, Styling
+      </h2>
 
-      <h3>💻 HTML Code:</h3>
-      <pre style={styles.codeBlock}>{marksheetCode}</pre>
+      {/* Description */}
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        This example demonstrates how to use <code>rowspan</code>, <code>colspan</code>, and inline styles in an HTML table to display a marksheet.
+      </p>
 
-      <h3>🔍 Output:</h3>
-      <div
-        style={styles.outputBox}
-        dangerouslySetInnerHTML={{ __html: marksheetCode }}
+      {/* Key Points */}
+      <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
+        {points.map((point, index) => (
+          <li key={index} style={{ marginBottom: '10px' }}>
+            <strong>{point.type}:</strong> {point.detail}
+          </li>
+        ))}
+      </ul>
+
+      {/* HTML Code */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>HTML Code</h3>
+      <pre style={{
+        background: '#f4f4f4',
+        padding: '15px',
+        borderRadius: '5px',
+        overflowX: 'auto'
+      }}>
+        <code>{code}</code>
+      </pre>
+
+      {/* Output */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
+      <div style={{
+        background: '#e8f5e9',
+        padding: '10px',
+        borderRadius: '5px'
+      }}
+        dangerouslySetInnerHTML={{ __html: code }}
       />
     </div>
   );
-};
-
-const styles = {
-  codeBlock: {
-    backgroundColor: '#272822',
-    color: '#f8f8f2',
-    padding: '20px',
-    borderRadius: '8px',
-    fontSize: '14px',
-    whiteSpace: 'pre-wrap',
-    overflowX: 'auto',
-  },
-  outputBox: {
-    border: '1px solid #ccc',
-    borderRadius: '8px',
-    padding: '20px',
-    backgroundColor: '#fff',
-    marginTop: '20px',
-  },
 };
 
 export default MarksheetTable;

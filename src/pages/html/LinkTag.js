@@ -22,31 +22,71 @@ const linkTagCode = `
   <h1>Hello with Linked Style!</h1>
 </body>
 </html>
-`;
+`.trim();
 
 const LinkTag = () => {
   return (
-    <div style={{ padding: 30, fontFamily: 'Segoe UI, sans-serif' }}>
-      <h2>🔗 HTML <code>&lt;link&gt;</code> Tag Demo</h2>
+    <div style={{
+      padding: '30px',
+      background: '#fff',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Title */}
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '20px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        🔗 HTML <code>&lt;link&gt;</code> Tag
+      </h2>
 
-      <p>The <code>&lt;link&gt;</code> tag is used to connect external resources like CSS, fonts, and favicons.</p>
+      {/* Description */}
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        The <code>&lt;link&gt;</code> tag in HTML is used to link external resources to a web document. 
+        It is commonly used to link stylesheets, fonts, and icons.
+      </p>
 
-      <h4>📌 Code Example:</h4>
-      <SyntaxHighlighter language="html" style={oneLight}>
-        {linkTagCode}
-      </SyntaxHighlighter>
+      {/* Key Points */}
+      <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
+        <li><strong>Stylesheet Linking:</strong> Links an external CSS file to style your HTML content.</li>
+        <li><strong>Font Linking:</strong> Loads web fonts (like Google Fonts) into your page.</li>
+        <li><strong>Favicon Linking:</strong> Sets a small website icon that appears in the browser tab.</li>
+        <li><strong>Inside &lt;head&gt;:</strong> The <code>&lt;link&gt;</code> tag should always be placed in the <code>&lt;head&gt;</code> section.</li>
+      </ul>
 
-      <h4>⚙️ Output Preview:</h4>
-      <div
-        style={{
-          fontFamily: "'Roboto', sans-serif",
-          backgroundColor: '#f5f5f5',
+      {/* Code Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>HTML Code Example</h3>
+      <div style={{
+        backgroundColor: '#f4f4f4',
+        borderRadius: '8px',
+        overflowX: 'auto',
+        border: '1px solid #e0e0e0'
+      }}>
+        <SyntaxHighlighter language="html" style={oneLight} customStyle={{
+          margin: 0,
           padding: '20px',
-          borderRadius: '10px',
-          border: '1px solid #ccc',
-          maxWidth: '600px',
-        }}
-      >
+          fontSize: '14px',
+        }}>
+          {linkTagCode}
+        </SyntaxHighlighter>
+      </div>
+
+      {/* Output Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '30px', marginBottom: '10px' }}>Rendered Output</h3>
+      <div style={{
+        fontFamily: "'Roboto', sans-serif",
+        backgroundColor: '#f9f9f9',
+        padding: '20px',
+        borderRadius: '10px',
+        border: '1px solid #ccc',
+        maxWidth: '600px'
+      }}>
         <h1 style={{ color: '#1e88e5' }}>Hello with Linked Style!</h1>
         <p>This text is using the <strong>Roboto</strong> font from Google Fonts and styled using inline CSS.</p>
       </div>

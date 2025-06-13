@@ -13,36 +13,67 @@ const code = `<!DOCTYPE html>
 
 const HighlightTags = () => {
   return (
-    <div style={{ fontFamily: 'Segoe UI, sans-serif', padding: '30px', backgroundColor: '#f8f8f8' }}>
-      <h2 style={{ marginBottom: '20px' }}>HTML Code: &lt;mark&gt; Tag</h2>
+    <div
+      style={{
+        padding: '30px',
+        background: '#fff',
+        borderRadius: '10px',
+        fontFamily: 'monospace',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+        lineHeight: '1.7',
+        maxWidth: '800px',
+        margin: 'auto',
+      }}
+    >
+      <h2
+        style={{
+          textAlign: 'center',
+          fontSize: '26px',
+          marginBottom: '20px',
+          color: '#003366',
+          borderBottom: '2px solid #eee',
+          paddingBottom: '10px',
+        }}
+      >
+        🔖 HTML <code>&lt;mark&gt;</code> Tag Demonstration
+      </h2>
 
-      {/* Code Display */}
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        The <code>&lt;mark&gt;</code> tag in HTML is used to highlight text. It renders the content with a yellow background by default.
+      </p>
+
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧾 Code Example</h3>
       <pre
         style={{
-          backgroundColor: '#272822',
-          color: '#f8f8f2',
-          padding: '20px',
-          borderRadius: '8px',
-          fontSize: '14px',
+          background: '#f4f4f4',
+          padding: '15px',
+          borderRadius: '5px',
           overflowX: 'auto',
+          fontSize: '14px',
           whiteSpace: 'pre-wrap',
         }}
       >
-        {code}
+        <code>{code}</code>
       </pre>
 
-      {/* Output Display */}
-      <h2 style={{ marginTop: '40px', marginBottom: '20px' }}>Output:</h2>
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>⚙️ Output Preview</h3>
       <div
         style={{
-          border: '1px solid #ddd',
-          borderRadius: '8px',
+          background: '#e8f5e9',
           padding: '20px',
-          backgroundColor: '#fff',
+          borderRadius: '5px',
+          fontSize: '14px',
+          color: '#333',
         }}
       >
         <p>This is a normal paragraph.</p>
-        <p>This is <mark>highlighted text</mark> using &lt;mark&gt; tag.</p>
+        <p>
+          This is{' '}
+          <mark style={{ backgroundColor: '#ffff00', padding: '2px 4px' }}>
+            highlighted text
+          </mark>{' '}
+          using &lt;mark&gt; tag.
+        </p>
       </div>
     </div>
   );

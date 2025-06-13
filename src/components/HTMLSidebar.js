@@ -8,7 +8,7 @@ const HTMLSidebar = () => {
     <div className="sidebar">
       <h5 className="sidebar-title">HTML Tutorial</h5>
       <nav className="sidebar-nav">
-        <NavLink to="/html/introduction" className={({ isActive }) => isActive ? 'active' : ''}>Introduction</NavLink>
+        <NavLink to="/html/HTMLIntroduction" className={({ isActive }) => isActive ? 'active' : ''}>HTML Introduction</NavLink>
         <NavLink to="/html/TagExample" className={({ isActive }) => isActive ? 'active' : ''}>HTML Tags</NavLink>
         <NavLink to="/html/FontSizeTag" className={({ isActive }) => isActive ? 'active' : ''}>HTML Font</NavLink>
         <NavLink to="/html/BasicTags" className={({ isActive }) => isActive ? 'active' : ''}>HTML Tags</NavLink>

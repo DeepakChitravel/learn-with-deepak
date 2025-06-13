@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const formCode = `
+const DataEntryForm = () => {
+  const formCode = `
 <form>
   <label for="name">Name:</label>
   <input type="text" id="name" name="name"><br><br>
@@ -23,29 +22,66 @@ const formCode = `
 
   <input type="submit" value="Submit">
   <input type="reset" value="Cancel">
-</form>
-`;
+</form>`.trim();
 
-const DataEntryForm = () => {
   const [submitted, setSubmitted] = useState(false);
 
+  const points = [
+    "HTML forms are used to collect user input.",
+    "`<input>` is used for fields like text, email, radio, etc.",
+    "`<select>` creates a dropdown menu for multiple choices.",
+    "`<form>` can have `submit` and `reset` buttons.",
+    "`onSubmit` event can be used in React to handle form submission."
+  ];
+
   return (
-    <div style={{ padding: '30px', fontFamily: 'Segoe UI, sans-serif', lineHeight: 1.6 }}>
-      <h2>🧾 Data Entry Form Example</h2>
+    <div style={{
+      backgroundColor: '#ffffff',
+      padding: '30px',
+      fontFamily: 'monospace',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Heading */}
+      <h2 style={{
+        color: '#003366',
+        fontSize: '26px',
+        borderBottom: '2px solid #ccc',
+        paddingBottom: '10px',
+        marginBottom: '20px'
+      }}>
+        HTML Data Entry Form
+      </h2>
 
-      <h4>📌 HTML Code:</h4>
-      <SyntaxHighlighter language="html" style={oneLight}>
-        {formCode}
-      </SyntaxHighlighter>
+      {/* Info Points */}
+      <ul style={{ fontSize: '16px', marginBottom: '30px', paddingLeft: '20px' }}>
+        {points.map((point, idx) => (
+          <li key={idx} style={{ marginBottom: '8px' }}>{point}</li>
+        ))}
+      </ul>
 
-      <h4>⚙️ Output:</h4>
+      {/* Code Block */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Form Code</h3>
+      <pre style={{
+        backgroundColor: '#f4f4f4',
+        padding: '15px',
+        borderRadius: '6px',
+        overflowX: 'auto',
+        marginBottom: '30px'
+      }}>
+        <code>{formCode}</code>
+      </pre>
+
+      {/* Output Form */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Rendered Output</h3>
       <form
         style={{
           border: '1px solid #ccc',
           backgroundColor: '#f9f9f9',
           padding: '20px',
           borderRadius: '10px',
-          maxWidth: '500px',
+          maxWidth: '500px'
         }}
         onSubmit={(e) => {
           e.preventDefault();

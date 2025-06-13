@@ -1,8 +1,7 @@
 import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const faviconCode = `
+const FaviconTag = () => {
+  const faviconCode = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,22 +14,57 @@ const faviconCode = `
 <body>
   <h1>Welcome to My Site!</h1>
 </body>
-</html>
-`;
+</html>`.trim();
 
-const FaviconTag = () => {
+  const points = [
+    "`<link rel=\"icon\">` is used to add a favicon to your webpage.",
+    "Favicon appears in the browser tab next to the page title.",
+    "You can use `.ico`, `.png`, or `.svg` formats.",
+    "The favicon file is usually placed in the root folder or assets.",
+    "`type=\"image/x-icon\"` is common but not strictly required."
+  ];
+
   return (
-    <div style={{ padding: 30, fontFamily: 'Segoe UI, sans-serif' }}>
-      <h2>🖼️ HTML <code>&lt;link rel="icon"&gt;</code> (Favicon) Tag Demo</h2>
+    <div style={{
+      backgroundColor: '#ffffff',
+      padding: '30px',
+      fontFamily: 'monospace',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Title */}
+      <h2 style={{
+        color: '#003366',
+        fontSize: '26px',
+        borderBottom: '2px solid #ccc',
+        paddingBottom: '10px',
+        marginBottom: '20px'
+      }}>
+        🔖 HTML Favicon Tag Example
+      </h2>
 
-      <p>The <code>&lt;link rel="icon"&gt;</code> tag is used to show a small image (favicon) on the browser tab.</p>
+      {/* Info Points */}
+      <ul style={{ fontSize: '16px', marginBottom: '30px', paddingLeft: '20px' }}>
+        {points.map((point, idx) => (
+          <li key={idx} style={{ marginBottom: '8px' }}>{point}</li>
+        ))}
+      </ul>
 
-      <h4>📌 HTML Code:</h4>
-      <SyntaxHighlighter language="html" style={oneLight}>
-        {faviconCode}
-      </SyntaxHighlighter>
+      {/* Code Block */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧾 HTML Code</h3>
+      <pre style={{
+        backgroundColor: '#f4f4f4',
+        padding: '15px',
+        borderRadius: '6px',
+        overflowX: 'auto',
+        marginBottom: '30px'
+      }}>
+        <code>{faviconCode}</code>
+      </pre>
 
-      <h4>⚙️ Output Preview:</h4>
+      {/* Output Preview */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🔍 Favicon Preview</h3>
       <div
         style={{
           display: 'flex',

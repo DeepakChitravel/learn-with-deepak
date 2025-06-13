@@ -1,74 +1,90 @@
 import React from 'react';
 
-const code = `
-<span style="color:#999">&lt;!DOCTYPE html&gt;</span><br/>
-<span style="color:#1E90FF">&lt;html&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&lt;head&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;</span><span style="color:#000">Basic HTML Tags Example</span><span style="color:#1E90FF">&lt;/title&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&lt;/head&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&lt;body&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span><b>This is bold text using &lt;b&gt;</b><span style="color:#1E90FF">&lt;/p&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span><strong>This is strong text using &lt;strong&gt;</strong><span style="color:#1E90FF">&lt;/p&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span><i>This is italic text using &lt;i&gt;</i><span style="color:#1E90FF">&lt;/p&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span><em>This is emphasized text using &lt;em&gt;</em><span style="color:#1E90FF">&lt;/p&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span><u>This is underlined text using &lt;u&gt;</u><span style="color:#1E90FF">&lt;/p&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&nbsp;&nbsp;&lt;center&gt;</span>This text is centered using &lt;center&gt;<span style="color:#1E90FF">&lt;/center&gt;</span><br/>
-<span style="color:#1E90FF">&nbsp;&nbsp;&lt;/body&gt;</span><br/>
-<span style="color:#1E90FF">&lt;/html&gt;</span>
-`;
-
-const renderedHTML = `
-  <p><b>This is bold text using &lt;b&gt;</b></p>
-  <p><strong>This is strong text using &lt;strong&gt;</strong></p>
-  <p><i>This is italic text using &lt;i&gt;</i></p>
-  <p><em>This is emphasized text using &lt;em&gt;</em></p>
-  <p><u>This is underlined text using &lt;u&gt;</u></p>
-  <div style="text-align: center;">This text is centered using &lt;center&gt;</div>
-`;
-
 const BasicTags = () => {
+  const code = `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Tags Example</title>
+  </head>
+  <body>
+    <p><b>This is bold text using &lt;b&gt;</b></p>
+    <p><strong>This is strong text using &lt;strong&gt;</strong></p>
+    <p><i>This is italic text using &lt;i&gt;</i></p>
+    <p><em>This is emphasized text using &lt;em&gt;</em></p>
+    <p><u>This is underlined text using &lt;u&gt;</u></p>
+    <center>This text is centered using &lt;center&gt;</center>
+  </body>
+</html>`.trim();
+
+  const output = `
+<b>This is bold text using <b></b></b>
+<strong>This is strong text using <strong></strong></strong>
+<i>This is italic text using <i></i></i>
+<em>This is emphasized text using <em></em></em>
+<u>This is underlined text using <u></u></u>
+<center>This text is centered using <center></center></center>`.trim();
+
+  const points = [
+    "`<b>` makes text bold, but `<strong>` adds semantic importance.",
+    "`<i>` italicizes text, while `<em>` also adds emphasis.",
+    "`<u>` underlines text (used rarely in modern HTML).",
+    "`<center>` is deprecated; use CSS `text-align: center` instead.",
+    "Prefer semantic tags like `<strong>` and `<em>` over `<b>` and `<i>`."
+  ];
+
   return (
-    <div style={{ fontFamily: 'Segoe UI, sans-serif', padding: '40px 20px', backgroundColor: '#f5f7fa' }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <h2 style={{ color: '#04AA6D', marginBottom: '20px' }}>🖋️ HTML Basic Formatting Tags</h2>
+    <div style={{
+      backgroundColor: '#ffffff',
+      padding: '30px',
+      fontFamily: 'monospace',
+      borderRadius: '10px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Heading */}
+      <h2 style={{
+        color: '#003366',
+        fontSize: '26px',
+        borderBottom: '2px solid #ccc',
+        paddingBottom: '10px',
+        marginBottom: '20px'
+      }}>
+        Basic HTML Formatting Tags
+      </h2>
 
-        <p style={{ fontSize: '16px', marginBottom: '25px', color: '#4A5568' }}>
-          This example shows how to use basic HTML formatting tags such as <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;u&gt;</code>, and more.
-        </p>
+      {/* Info Points */}
+      <ul style={{ fontSize: '16px', marginBottom: '30px', paddingLeft: '20px' }}>
+        {points.map((point, idx) => (
+          <li key={idx} style={{ marginBottom: '8px' }}>{point}</li>
+        ))}
+      </ul>
 
-        {/* Code View */}
-        <h4 style={{ marginBottom: '10px', color: '#2D3748' }}>💻 Code Example</h4>
-        <pre
-          style={{
-            backgroundColor: '#ffffff',
-            border: '1px solid #E2E8F0',
-            borderRadius: '8px',
-            padding: '20px',
-            fontFamily: 'Consolas, Monaco, monospace',
-            fontSize: '15px',
-            
-            overflowX: 'auto',
-            whiteSpace: 'pre-wrap',
-            boxShadow: '0 0 6px rgba(0, 0, 0, 0.05)',
-          }}
-          dangerouslySetInnerHTML={{ __html: code }}
-        />
+      {/* Code Block */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>HTML Code</h3>
+      <pre style={{
+        backgroundColor: '#f4f4f4',
+        padding: '15px',
+        borderRadius: '6px',
+        overflowX: 'auto',
+        marginBottom: '30px'
+      }}>
+        <code>{code}</code>
+      </pre>
 
-        {/* Output View */}
-        <h4 style={{ marginTop: '40px', marginBottom: '20px', color: '#2D3748' }}>🔍 Rendered Output</h4>
-        <div
-          style={{
-            border: '1px solid #E2E8F0',
-            borderRadius: '8px',
-            padding: '25px',
-            backgroundColor: '#ffffff',
-            fontSize: '16px',
-            lineHeight: '1',
-            boxShadow: '0 0 6px rgba(0, 0, 0, 0.05)',
-          }}
-          dangerouslySetInnerHTML={{ __html: renderedHTML }}
-        />
-      </div>
+      {/* Output Block */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Output</h3>
+      <div
+        style={{
+          border: '1px solid #ddd',
+          borderRadius: '6px',
+          padding: '20px',
+          backgroundColor: '#fefefe',
+          fontSize: '16px',
+          lineHeight: '1.6'
+        }}
+        dangerouslySetInnerHTML={{ __html: output }}
+      />
     </div>
   );
 };

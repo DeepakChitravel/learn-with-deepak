@@ -33,23 +33,46 @@ const tableCode = `<table border="1" cellpadding="10" cellspacing="0">
 
 const HtmlTableIntro = () => {
   return (
-    <div style={{ padding: '30px', fontFamily: 'Segoe UI, sans-serif', backgroundColor: '#f9f9f9' }}>
-      <h2>📋 Introduction to HTML Tables</h2>
-      <p>HTML tables are used to display data in rows and columns format.</p>
+    <div style={{
+      padding: '30px',
+      background: '#fff',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7',
+      maxWidth: '800px',
+      margin: 'auto'
+    }}>
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '20px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        📋 Introduction to HTML Tables
+      </h2>
 
-      <h3>🔧 Common Table Attributes</h3>
-      <ul>
-        <li><strong>border</strong> – sets the border width</li>
-        <li><strong>cellpadding</strong> – sets space inside the cell</li>
-        <li><strong>cellspacing</strong> – sets space between cells</li>
-        <li><strong>width</strong> – sets the width of the table</li>
-        <li><strong>align</strong> – aligns the table (deprecated)</li>
+      <p style={{ fontSize: '16px', marginBottom: '20px' }}>
+        HTML tables are used to present data in a tabular form with rows and columns.
+      </p>
+
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🔧 Common Table Attributes</h3>
+      <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
+        <li><strong>border</strong> – Sets the border width</li>
+        <li><strong>cellpadding</strong> – Adds space inside cells</li>
+        <li><strong>cellspacing</strong> – Adds space between cells</li>
+        <li><strong>width</strong> – Sets the width of the table</li>
+        <li><strong>align</strong> – Aligns the table (deprecated)</li>
       </ul>
 
-      <h3>🧾 Sample Code</h3>
-      <pre style={styles.codeBlock}>{tableCode}</pre>
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>🧾 Sample Code</h3>
+      <pre style={styles.codeBlock}>
+        <code>{tableCode}</code>
+      </pre>
 
-      <h3>💡 Output:</h3>
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '30px', marginBottom: '10px' }}>💡 Output</h3>
       <div style={styles.outputBox} dangerouslySetInnerHTML={{ __html: tableCode }} />
     </div>
   );
@@ -57,21 +80,20 @@ const HtmlTableIntro = () => {
 
 const styles = {
   codeBlock: {
-    backgroundColor: '#272822',
-    color: '#f8f8f2',
-    padding: '20px',
-    borderRadius: '8px',
+    backgroundColor: '#f4f4f4',
+    padding: '15px',
+    borderRadius: '5px',
+    overflowX: 'auto',
     fontSize: '14px',
     whiteSpace: 'pre-wrap',
-    marginTop: '10px',
   },
   outputBox: {
-    border: '1px solid #ccc',
-    borderRadius: '8px',
+    background: '#e8f5e9',
     padding: '15px',
-    backgroundColor: '#fff',
-    marginTop: '15px',
-    overflowX: 'auto',
+    borderRadius: '5px',
+    fontSize: '14px',
+    color: '#333',
+    marginTop: '10px',
   },
 };
 

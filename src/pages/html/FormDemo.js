@@ -6,7 +6,7 @@ const formAttributeCode = `
 <form method="POST" action="/submit">
   <!-- form elements here -->
 </form>
-`;
+`.trim();
 
 const formControlsCode = `
 <input type="text" placeholder="Enter your name" />
@@ -18,20 +18,29 @@ const formControlsCode = `
 </select>
 <textarea rows="4" cols="30"></textarea>
 <input type="submit" value="Submit" />
-`;
+`.trim();
 
 const FormDemo = () => {
   return (
-    <div style={{ padding: '30px', fontFamily: 'Segoe UI, sans-serif', lineHeight: 1.6 }}>
-      <h1>🌐 HTML Forms Learning Module</h1>
+    <div style={{
+      padding: '30px',
+      fontFamily: 'Segoe UI, sans-serif',
+      lineHeight: 1.7,
+      maxWidth: '900px',
+      margin: '0 auto',
+      color: '#333'
+    }}>
+      <h1 style={{ textAlign: 'center', fontSize: '28px', marginBottom: '30px', color: '#003366' }}>
+        🌐 HTML Forms Learning Module
+      </h1>
 
-      {/* Section: Form Attributes */}
+      {/* Section: Form Tag Attributes */}
       <section style={{ marginBottom: '40px' }}>
-        <h2>🧾 Form Tag Attributes</h2>
-        <p><strong>method:</strong> Specifies how to send form-data (e.g., GET or POST)</p>
-        <p><strong>action:</strong> URL where the form submits data</p>
+        <h2 style={{ color: '#1a237e' }}>🧾 Form Tag Attributes</h2>
+        <p><strong>method:</strong> Specifies how to send form-data (e.g., <code>GET</code> or <code>POST</code>).</p>
+        <p><strong>action:</strong> Defines the URL where the form data is sent after submission.</p>
 
-        <h4>🔧 Example:</h4>
+        <h4 style={{ marginTop: '20px', color: '#37474f' }}>🔧 Example:</h4>
         <SyntaxHighlighter language="html" style={oneLight}>
           {formAttributeCode}
         </SyntaxHighlighter>
@@ -39,58 +48,66 @@ const FormDemo = () => {
 
       {/* Section: Form Controls */}
       <section style={{ marginBottom: '40px' }}>
-        <h2>🔘 Form Controls</h2>
+        <h2 style={{ color: '#1a237e' }}>🔘 Form Controls</h2>
         <ul>
-          <li><strong>Text Box:</strong> &lt;input type="text" /&gt;</li>
-          <li><strong>Password:</strong> &lt;input type="password" /&gt;</li>
-          <li><strong>Radio Buttons:</strong> &lt;input type="radio" /&gt;</li>
-          <li><strong>Checkbox:</strong> &lt;input type="checkbox" /&gt;</li>
-          <li><strong>Select Box:</strong> &lt;select&gt;&lt;/select&gt;</li>
-          <li><strong>Textarea:</strong> &lt;textarea&gt;&lt;/textarea&gt;</li>
-          <li><strong>Submit Button:</strong> &lt;input type="submit" /&gt;</li>
+          <li><strong>Text Box:</strong> <code>&lt;input type="text" /&gt;</code></li>
+          <li><strong>Password:</strong> <code>&lt;input type="password" /&gt;</code></li>
+          <li><strong>Radio Button:</strong> <code>&lt;input type="radio" /&gt;</code></li>
+          <li><strong>Checkbox:</strong> <code>&lt;input type="checkbox" /&gt;</code></li>
+          <li><strong>Select Box:</strong> <code>&lt;select&gt;&lt;/select&gt;</code></li>
+          <li><strong>Textarea:</strong> <code>&lt;textarea&gt;&lt;/textarea&gt;</code></li>
+          <li><strong>Submit Button:</strong> <code>&lt;input type="submit" /&gt;</code></li>
         </ul>
 
-        <h4>💡 Code Example:</h4>
+        <h4 style={{ marginTop: '20px', color: '#37474f' }}>💡 Code Example:</h4>
         <SyntaxHighlighter language="html" style={oneLight}>
           {formControlsCode}
         </SyntaxHighlighter>
       </section>
 
-      {/* Section: Output Preview */}
+      {/* Section: Output */}
       <section>
-        <h2>⚙️ Live Output</h2>
+        <h2 style={{ color: '#1a237e' }}>⚙️ Live Output</h2>
         <div style={{
           border: '1px solid #ccc',
           backgroundColor: '#f9f9f9',
-          padding: '20px',
+          padding: '25px',
           borderRadius: '10px',
-          maxWidth: '500px'
+          maxWidth: '500px',
+          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
         }}>
           <form>
-            <label>Full Name:</label><br />
-            <input type="text" placeholder="Enter your name" /><br /><br />
+            <label><strong>Full Name:</strong></label><br />
+            <input type="text" placeholder="Enter your name" style={{ width: '100%', padding: '8px', margin: '8px 0' }} /><br />
 
-            <label>Password:</label><br />
-            <input type="password" placeholder="Enter password" /><br /><br />
+            <label><strong>Password:</strong></label><br />
+            <input type="password" placeholder="Enter password" style={{ width: '100%', padding: '8px', margin: '8px 0' }} /><br />
 
-            <label>Gender:</label><br />
-            <input type="radio" name="gender" value="male" /> Male
+            <label><strong>Gender:</strong></label><br />
+            <input type="radio" name="gender" value="male" /> Male{' '}
             <input type="radio" name="gender" value="female" /> Female<br /><br />
 
-            <label>Skills:</label><br />
-            <input type="checkbox" name="skill" value="html" /> HTML
+            <label><strong>Skills:</strong></label><br />
+            <input type="checkbox" name="skill" value="html" /> HTML{' '}
             <input type="checkbox" name="skill" value="css" /> CSS<br /><br />
 
-            <label>Department:</label><br />
-            <select>
+            <label><strong>Department:</strong></label><br />
+            <select style={{ width: '100%', padding: '8px', margin: '8px 0' }}>
               <option value="cs">Computer Science</option>
               <option value="math">Mathematics</option>
-            </select><br /><br />
+            </select><br />
 
-            <label>Address:</label><br />
-            <textarea rows="4" cols="30" placeholder="Enter your address"></textarea><br /><br />
+            <label><strong>Address:</strong></label><br />
+            <textarea rows="4" cols="30" placeholder="Enter your address" style={{ width: '100%', padding: '8px' }}></textarea><br /><br />
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" style={{
+              padding: '10px 20px',
+              backgroundColor: '#1a237e',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }} />
           </form>
         </div>
       </section>
