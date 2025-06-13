@@ -47,31 +47,60 @@ const CSSFlexBox = () => {
   `.trim();
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>CSS Flexbox Example</h2>
-
-      {/* Code Display */}
-      <h4>CSS Code</h4>
-      <pre
+    <div
+      style={{
+        padding: '30px',
+        background: '#fff',
+        borderRadius: '10px',
+        fontFamily: 'monospace',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+        lineHeight: '1.7'
+      }}
+    >
+      <h2
         style={{
-          backgroundColor: '#272822',
-          color: '#f8f8f2',
-          padding: '15px',
+          textAlign: 'center',
+          fontSize: '26px',
+          marginBottom: '20px',
+          color: '#003366',
+          borderBottom: '2px solid #eee',
+          paddingBottom: '10px'
+        }}
+      >
+        CSS Flexbox Example
+      </h2>
+
+      <p style={{ fontSize: '16px' }}>
+        Flexbox (Flexible Box Layout) is a CSS3 layout model that allows items to align and distribute space within a container, even when their size is unknown or dynamic. It helps build responsive, space-efficient UI layouts.
+      </p>
+
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>CSS Code</h3>
+      <div
+        style={{
+          backgroundColor: '#f4f4f4',
+          border: '1px solid #ccc',
           borderRadius: '8px',
+          padding: '15px',
           overflowX: 'auto',
-          fontSize: '14px',
+          fontFamily: 'monospace',
+          fontSize: '15px',
+          whiteSpace: 'pre-wrap',
+          lineHeight: '1.6',
         }}
       >
         <code>{codeString}</code>
-      </pre>
+      </div>
 
-      {/* Output Display */}
-      <h4 style={{ marginTop: '30px' }}>Output</h4>
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '30px', marginBottom: '10px' }}>Output</h3>
       <div style={containerStyle}>
         <div style={boxStyle}>Box 1</div>
         <div style={boxStyle}>Box 2</div>
         <div style={boxStyle}>Box 3</div>
       </div>
+
+      <p style={{ fontStyle: 'italic', color: '#777', textAlign: 'center', marginTop: '20px' }}>
+        This layout uses <code>display: flex</code> with <code>justify-content</code> and <code>align-items</code> for alignment.
+      </p>
     </div>
   );
 };

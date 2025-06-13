@@ -146,11 +146,17 @@ import MultiDArray from './pages/c/MultiDArray';
 import PointerIntro from './pages/c/PointerIntro';
 import PointerDemo from './pages/c/PointerDemo';
 import StructureC from './pages/c/StructureC';
+import JavaScriptLayout from './pages/javascript/JavaScriptLayout';
+
+
 function App() {  
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
+ <Route path="/javascript" element={<JavaScriptLayout />}>
+ </Route>
+
         <Route path="/course" element={<ApplicationCourse />} />
         {/* Nested Routes under /fundamentals */}
         <Route path="/fundamentals" element={<FundamentalsLayout />}>

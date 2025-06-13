@@ -1,12 +1,35 @@
 import React from 'react';
 
-const ConditionalFormatting = () => {
+const CComments = () => {
+  const code = `
+#include <stdio.h>
+
+int main() {
+    // This is a single-line comment
+    printf("Hello, World!\\n");
+
+    /* 
+       This is a multi-line comment.
+       It can span multiple lines.
+    */
+    printf("Learning C Comments!\\n");
+
+    return 0;
+}
+`.trim();
+
+  const output = `
+Hello, World!
+Learning C Comments!
+`.trim();
+
   const points = [
-    { type: 'Purpose', detail: 'Highlights cells based on specific rules or conditions.' },
-    { type: 'Benefits', detail: 'Helps visualize patterns, trends, and outliers in data.' },
-    { type: 'Examples', detail: 'Highlight sales over a target, color-code exam results.' },
-    { type: 'Visual Cues', detail: 'Uses colors, icons, or bars to represent data meaningfully.' },
-    { type: 'Steps to Use', detail: 'Select cells → Go to Home > Conditional Formatting → Choose rule.' },
+    { type: 'What Are Comments?', detail: 'Explanatory notes added to the code to increase readability and understanding.' },
+    { type: 'Single-line Comment', detail: 'Begins with // and continues to the end of the line.' },
+    { type: 'Multi-line Comment', detail: 'Enclosed between /* and */ and can span multiple lines.' },
+    { type: 'Documentation Purpose', detail: 'Used to describe what a block or line of code is doing for easier maintenance.' },
+    { type: 'Helps Debugging', detail: 'Temporarily disable code by commenting it out during debugging.' },
+    { type: 'Compiler Ignorance', detail: 'The compiler completely skips comments during compilation.' },
   ];
 
   return (
@@ -14,28 +37,26 @@ const ConditionalFormatting = () => {
       padding: '30px',
       background: '#fff',
       borderRadius: '10px',
-      fontFamily: 'Segoe UI, sans-serif',
+      fontFamily: 'monospace',
       boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-      lineHeight: '1.7',
-      maxWidth: '700px',
-      margin: '40px auto'
+      lineHeight: '1.7'
     }}>
       {/* Title */}
       <h2 style={{
         textAlign: 'center',
         fontSize: '26px',
         marginBottom: '20px',
-        color: '#0d47a1',
+        color: '#003366',
         borderBottom: '2px solid #eee',
         paddingBottom: '10px'
       }}>
-        🎨 Conditional Formatting in MS Excel
+        Comments in C
       </h2>
 
       {/* Description */}
       <p style={{ fontSize: '16px', marginBottom: '20px' }}>
-        Conditional Formatting in Excel lets you automatically format cells based on the values they contain.
-        It enhances the readability and visual appeal of your spreadsheet by highlighting important information.
+        Comments are non-executable statements used to document and explain code logic.
+        They are ignored by the compiler and do not affect the execution of the program.
       </p>
 
       {/* Points */}
@@ -47,24 +68,28 @@ const ConditionalFormatting = () => {
         ))}
       </ul>
 
-      {/* Example Output */}
-      <h3 style={{ color: '#1b5e20', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>
-        ✅ Example Use Cases
-      </h3>
+      {/* Code Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>Example Code</h3>
       <pre style={{
         background: '#f4f4f4',
         padding: '15px',
         borderRadius: '5px',
         overflowX: 'auto'
       }}>
-        <code>{`
-- Mark students scoring below 35 in red.
-- Highlight sales over ₹50,000 in green.
-- Use icon sets to display trends visually.
-        `.trim()}</code>
+        <code>{code}</code>
+      </pre>
+
+      {/* Output Section */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '20px', marginBottom: '10px' }}>Output</h3>
+      <pre style={{
+        background: '#e8f5e9',
+        padding: '10px',
+        borderRadius: '5px'
+      }}>
+        <code>{output}</code>
       </pre>
     </div>
   );
 };
 
-export default ConditionalFormatting;
+export default CComments;

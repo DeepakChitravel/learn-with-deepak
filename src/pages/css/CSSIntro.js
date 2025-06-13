@@ -1,144 +1,121 @@
 import React from 'react';
-import { Container, Row, Col, Card, Table } from 'react-bootstrap';
 
 const CSSIntro = () => {
+  const syntaxExample = `h1 { color: red; }`;
+
+  const textProps = [
+    { type: 'Color', value: 'Predefined Color Name', example: `h1 { color: red; }` },
+    { type: 'Text Align', value: 'left | right | center | justify', example: `h1 { text-align: justify; }` },
+    { type: 'Font Family', value: 'Font Name', example: `h1 { font-family: 'Times New Roman'; }` },
+    { type: 'Font Style', value: 'normal | italic', example: `p { font-style: italic; }` },
+    { type: 'Font Weight', value: 'normal | bold', example: `p { font-weight: bold; }` },
+    { type: 'Font Size', value: 'Size in pixels', example: `h1 { font-size: 14px; }` },
+  ];
+
+  const bgBorderProps = [
+    { type: 'Background Color', value: 'Color Name', example: `body { background-color: blue; }` },
+    { type: 'Border', value: '10px solid red', example: `h1 { border: 10px solid red; }` },
+    { type: 'Background Image', value: 'URL', example: `body { background-image: url('image.jpg'); }` },
+    { type: 'Background Position', value: 'left | right | center', example: `body { background-position: left; }` },
+  ];
+
+  const marginProps = [
+    { type: 'Margin Top', value: 'Size in pixels', example: `h1 { margin-top: 50px; }` },
+    { type: 'Margin Bottom', value: 'Size in pixels', example: `h1 { margin-bottom: 50px; }` },
+  ];
+
   return (
-    <Container className="my-5">
-      <Card className="p-4 shadow-sm border-0 rounded-4">
-        <h2 className="text-primary fw-bold mb-3">🎨 CSS Introduction</h2>
+    <div style={{
+      padding: '30px',
+      background: '#fff',
+      borderRadius: '10px',
+      fontFamily: 'monospace',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+      lineHeight: '1.7'
+    }}>
+      {/* Title */}
+      <h2 style={{
+        textAlign: 'center',
+        fontSize: '26px',
+        marginBottom: '20px',
+        color: '#003366',
+        borderBottom: '2px solid #eee',
+        paddingBottom: '10px'
+      }}>
+        CSS Introduction
+      </h2>
 
-        <h4 className="text-secondary">👨‍🔬 Who Invented CSS?</h4>
-        <p>
-          CSS, which stands for <strong>Cascading Style Sheet</strong>, was invented by <strong>Håkon Wium Lie</strong> in <strong>1994</strong> while working at <strong>CERN</strong>, the European Organization for Nuclear Research. He collaborated with <strong>Tim Berners-Lee</strong>, the inventor of the World Wide Web.
-        </p>
-        <p>
-          Before CSS, web pages were styled using only HTML, which had limited formatting options like bold and italics. As websites became more complex, CSS was introduced to separate content from presentation, improve flexibility, and enhance maintainability.
-        </p>
+      {/* Intro Paragraphs */}
+      <p style={{ fontSize: '16px' }}>
+        CSS, or <strong>Cascading Style Sheet</strong>, was invented by <strong>Håkon Wium Lie</strong> in <strong>1994</strong> at <strong>CERN</strong>. It was developed to separate content (HTML) from design (CSS), improving flexibility and maintainability.
+      </p>
+      <p style={{ fontSize: '16px' }}>
+        Before CSS, formatting was done directly in HTML using limited tags. CSS now lets us control layout, color, fonts, spacing, and more — even across multiple pages with a single stylesheet.
+      </p>
 
-        <hr />
+      <hr />
 
-        <p><strong>Full Form:</strong> Cascading Style Sheet</p>
-        <p><strong>Developer:</strong> Håkon Wium Lie</p>
-        <p><strong>Released Date:</strong> October 10, 1994</p>
+      {/* CSS Facts */}
+      <ul style={{ paddingLeft: '20px', marginBottom: '20px' }}>
+        <li><strong>Full Form:</strong> Cascading Style Sheet</li>
+        <li><strong>Developer:</strong> Håkon Wium Lie</li>
+        <li><strong>Released Date:</strong> October 10, 1994</li>
+      </ul>
 
-        <p>
-          CSS is used to control the layout and presentation of HTML elements. It allows you to apply styles to multiple pages at once using a <code>.css</code> file. With CSS, you can define colors, fonts, spacing, background images, borders, and more.
-        </p>
+      {/* Syntax */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginBottom: '10px' }}>CSS Syntax</h3>
+      <pre style={{
+        background: '#f4f4f4',
+        padding: '15px',
+        borderRadius: '5px',
+        overflowX: 'auto'
+      }}>
+        <code>{syntaxExample}</code>
+      </pre>
 
-        <hr />
+      {/* Text Properties */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '25px', marginBottom: '10px' }}>
+        CSS Text Formatting Properties
+      </h3>
+      <ul style={{ paddingLeft: '20px' }}>
+        {textProps.map((prop, idx) => (
+          <li key={idx} style={{ marginBottom: '10px' }}>
+            <strong>{prop.type}</strong> — {prop.value}<br />
+            <code>{prop.example}</code>
+          </li>
+        ))}
+      </ul>
 
-        <h4 className="text-secondary fw-semibold mb-3">🧱 CSS Syntax</h4>
-        <p>Example:</p>
-        <pre><code>h1 &#123; color: red; &#125;</code></pre>
+      {/* Background & Border */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '25px', marginBottom: '10px' }}>
+        Background & Border Properties
+      </h3>
+      <ul style={{ paddingLeft: '20px' }}>
+        {bgBorderProps.map((prop, idx) => (
+          <li key={idx} style={{ marginBottom: '10px' }}>
+            <strong>{prop.type}</strong> — {prop.value}<br />
+            <code>{prop.example}</code>
+          </li>
+        ))}
+      </ul>
 
-        <hr />
+      {/* Margin Properties */}
+      <h3 style={{ color: '#1a237e', fontSize: '20px', marginTop: '25px', marginBottom: '10px' }}>
+        Margin Properties
+      </h3>
+      <ul style={{ paddingLeft: '20px' }}>
+        {marginProps.map((prop, idx) => (
+          <li key={idx} style={{ marginBottom: '10px' }}>
+            <strong>{prop.type}</strong> — {prop.value}<br />
+            <code>{prop.example}</code>
+          </li>
+        ))}
+      </ul>
 
-        <h4 className="text-secondary fw-semibold mb-3">📝 CSS Text Formatting Properties</h4>
-        <Table striped bordered hover responsive>
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Color</td>
-              <td>Predefined Color Name</td>
-              <td><code>h1 &#123; color: red; &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Text Align</td>
-              <td>left | right | center | justify</td>
-              <td><code>h1 &#123; text-align: justify; &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Font Family</td>
-              <td>Font Name</td>
-              <td><code>h1 &#123; font-family: 'Times New Roman'; &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Font Style</td>
-              <td>normal | italic</td>
-              <td><code>p &#123; font-style: italic; &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Font Weight</td>
-              <td>normal | bold</td>
-              <td><code>p &#123; font-weight: bold; &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Font Size</td>
-              <td>Size in pixels</td>
-              <td><code>h1 &#123; font-size: 14px; &#125;</code></td>
-            </tr>
-          </tbody>
-        </Table>
-
-        <hr />
-
-        <h4 className="text-secondary fw-semibold mb-3">🌈 Background & Border Properties</h4>
-        <Table striped bordered hover responsive>
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Background Color</td>
-              <td>Color Name</td>
-              <td><code>body &#123; background-color: blue; &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Border</td>
-              <td>10px solid red</td>
-              <td><code>h1 &#123; border: 10px solid red; &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Background Image</td>
-              <td>URL</td>
-              <td><code>body &#123; background-image: url('image.jpg'); &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Background Position</td>
-              <td>left | right | center</td>
-              <td><code>body &#123; background-position: left; &#125;</code></td>
-            </tr>
-          </tbody>
-        </Table>
-
-        <hr />
-
-        <h4 className="text-secondary fw-semibold mb-3">📏 Margin Properties</h4>
-        <Table striped bordered hover responsive>
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Value</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Margin Top</td>
-              <td>Size in pixels</td>
-              <td><code>h1 &#123; margin-top: 50px; &#125;</code></td>
-            </tr>
-            <tr>
-              <td>Margin Bottom</td>
-              <td>Size in pixels</td>
-              <td><code>h1 &#123; margin-bottom: 50px; &#125;</code></td>
-            </tr>
-          </tbody>
-        </Table>
-
-        <p className="text-center mt-4 text-muted fst-italic">Thank you for watching!</p>
-      </Card>
-    </Container>
+      <p className="text-center mt-4" style={{ fontStyle: 'italic', color: '#777' }}>
+        Thank you for learning CSS!
+      </p>
+    </div>
   );
 };
 
