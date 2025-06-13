@@ -132,6 +132,12 @@ import IfStatement from './pages/c/IfStatement';
 import IfElseStatement from './pages/c/IfElseStatement';
 import IfElseIfLadder from './pages/c/IfElseIfLadder';
 import NestedIf from './pages/c/NestedIf';
+import ShiftOperators from './pages/c/ShiftOperators';
+import LeftShift from './pages/c/LeftShift';
+import RightShift from './pages/c/RightShift';
+import SwitchC from './pages/c/SwitchC';
+import LoopIntro from './pages/c/LoopIntro';
+import LoopTypes from './pages/c/LoopTypes';
 function App() {  
   return (
     <BrowserRouter>
@@ -282,6 +288,12 @@ function App() {
           <Route path="IfElseStatement" element={<IfElseStatement />} />
           <Route path="IfElseIfLadder" element={<IfElseIfLadder />} />
           <Route path="NestedIf" element={<NestedIf />} />
+          <Route path="ShiftOperators" element={<ShiftOperators />} />
+          <Route path="LeftShift" element={<LeftShift />} />
+          <Route path="RightShift" element={<RightShift />} />
+          <Route path="SwitchC" element={<SwitchC />} />
+          <Route path="LoopIntro" element={<LoopIntro />} />
+          <Route path="LoopTypes" element={<LoopTypes />} />
         </Route>
 
       </Routes>

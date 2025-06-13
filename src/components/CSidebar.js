@@ -49,6 +49,12 @@ const CSidebar = () => {
     { path: '/c/IfElseStatement', name: 'C If Else Statement' },
     { path: '/c/IfElseIfLadder', name: 'C If Else If Ladder' },
     { path: '/c/NestedIf', name: 'C NestedIf' },
+    { path: '/c/ShiftOperators', name: 'C Shift Operators' },
+    { path: '/c/LeftShift', name: 'C Left Shift' },
+    { path: '/c/RightShift', name: 'C Right Shift' },
+    { path: '/c/SwitchC', name: 'C Switch' },
+    { path: '/c/LoopIntro', name: 'C Loop Intro' },
+    { path: '/c/LoopTypes', name: 'C Loop Types' },
     
   ];
 
