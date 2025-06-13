@@ -59,6 +59,9 @@ const CSidebar = () => {
     { path: '/c/ArrayIntro', name: 'C Array Intro' },
     { path: '/c/OneDArray', name: 'C One DArray ' },
     { path: '/c/TwoDArray', name: 'C Two DArray' },
+    { path: '/c/MultiDArray', name: 'C Multi DArray' },
+    { path: '/c/PointerIntro', name: 'C Pointer Intro' },
+    { path: '/c/PointerDemo', name: 'C Pointer Demo' },
     
   ];
 

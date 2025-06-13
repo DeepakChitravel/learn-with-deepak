@@ -140,6 +140,11 @@ import LoopIntro from './pages/c/LoopIntro';
 import LoopTypes from './pages/c/LoopTypes';
 import GotoStatement from './pages/c/GotoStatement';
 import ArrayIntro from './pages/c/ArrayIntro';
+import OneDArray from './pages/c/OneDArray';
+import TwoDArray from './pages/c/TwoDArray';
+import MultiDArray from './pages/c/MultiDArray';
+import PointerIntro from './pages/c/PointerIntro';
+import PointerDemo from './pages/c/PointerDemo';
 function App() {  
   return (
     <BrowserRouter>
@@ -298,6 +303,12 @@ function App() {
           <Route path="LoopTypes" element={<LoopTypes />} />
           <Route path="GotoStatement" element={<GotoStatement />} />
           <Route path="ArrayIntro" element={<ArrayIntro />} />
+          <Route path="OneDArray" element={<OneDArray />} />
+          <Route path="TwoDArray" element={<TwoDArray />} />
+          <Route path="MultiDArray" element={<MultiDArray />} />
+          <Route path="PointerIntro" element={<PointerIntro />} />
+          <Route path="PointerDemo" element={<PointerDemo />} />
+          
         </Route>
 
       </Routes>
