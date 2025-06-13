@@ -145,6 +145,7 @@ import TwoDArray from './pages/c/TwoDArray';
 import MultiDArray from './pages/c/MultiDArray';
 import PointerIntro from './pages/c/PointerIntro';
 import PointerDemo from './pages/c/PointerDemo';
+import StructureC from './pages/c/StructureC';
 function App() {  
   return (
     <BrowserRouter>
@@ -308,6 +309,7 @@ function App() {
           <Route path="MultiDArray" element={<MultiDArray />} />
           <Route path="PointerIntro" element={<PointerIntro />} />
           <Route path="PointerDemo" element={<PointerDemo />} />
+          <Route path="StructureC" element={<StructureC />} />
           
         </Route>
 
