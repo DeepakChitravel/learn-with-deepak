@@ -43,10 +43,12 @@ const CSidebar = () => {
     { path: '/c/AutoVariable', name: 'C Auto Variable' },
     { path: '/c/ExternVariable', name: 'C Extern Variable' },
     { path: '/c/COperators', name: 'C Operators' },
-    { path: '/c/MiscOperators', name: 'C MiscOperators' },
-    { path: '/c/ControlStatementIntro', name: 'C ControlStatementIntro' },
-    { path: '/c/IfStatement', name: 'C IfStatement' },
-    { path: '/c/IfElseStatement', name: 'C IfElseStatement' },
+    { path: '/c/MiscOperators', name: 'C Misc Operators' },
+    { path: '/c/ControlStatementIntro', name: 'C Control Statement' },
+    { path: '/c/IfStatement', name: 'C If Statement' },
+    { path: '/c/IfElseStatement', name: 'C If Else Statement' },
+    { path: '/c/IfElseIfLadder', name: 'C If Else If Ladder' },
+    { path: '/c/NestedIf', name: 'C NestedIf' },
     
   ];
 

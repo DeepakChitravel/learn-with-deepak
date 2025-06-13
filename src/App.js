@@ -130,6 +130,8 @@ import MiscOperator from './pages/c/MiscOperators';
 import ControlStatementIntro from './pages/c/ControlStatementIntro';
 import IfStatement from './pages/c/IfStatement';
 import IfElseStatement from './pages/c/IfElseStatement';
+import IfElseIfLadder from './pages/c/IfElseIfLadder';
+import NestedIf from './pages/c/NestedIf';
 function App() {  
   return (
     <BrowserRouter>
@@ -278,6 +280,8 @@ function App() {
           <Route path="ControlStatementIntro" element={<ControlStatementIntro />} />
           <Route path="IfStatement" element={<IfStatement />} />
           <Route path="IfElseStatement" element={<IfElseStatement />} />
+          <Route path="IfElseIfLadder" element={<IfElseIfLadder />} />
+          <Route path="NestedIf" element={<NestedIf />} />
         </Route>
 
       </Routes>
