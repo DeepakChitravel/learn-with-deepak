@@ -138,6 +138,8 @@ import RightShift from './pages/c/RightShift';
 import SwitchC from './pages/c/SwitchC';
 import LoopIntro from './pages/c/LoopIntro';
 import LoopTypes from './pages/c/LoopTypes';
+import GotoStatement from './pages/c/GotoStatement';
+import ArrayIntro from './pages/c/ArrayIntro';
 function App() {  
   return (
     <BrowserRouter>
@@ -294,6 +296,8 @@ function App() {
           <Route path="SwitchC" element={<SwitchC />} />
           <Route path="LoopIntro" element={<LoopIntro />} />
           <Route path="LoopTypes" element={<LoopTypes />} />
+          <Route path="GotoStatement" element={<GotoStatement />} />
+          <Route path="ArrayIntro" element={<ArrayIntro />} />
         </Route>
 
       </Routes>

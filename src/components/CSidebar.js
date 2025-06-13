@@ -55,6 +55,10 @@ const CSidebar = () => {
     { path: '/c/SwitchC', name: 'C Switch' },
     { path: '/c/LoopIntro', name: 'C Loop Intro' },
     { path: '/c/LoopTypes', name: 'C Loop Types' },
+    { path: '/c/GotoStatement', name: 'C Goto Statement' },
+    { path: '/c/ArrayIntro', name: 'C Array Intro' },
+    { path: '/c/OneDArray', name: 'C One DArray ' },
+    { path: '/c/TwoDArray', name: 'C Two DArray' },
     
   ];
 
