@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/learn-with-deepak/static/css/main.77253e6a.css",
+    "main.js": "/learn-with-deepak/static/js/main.af953f56.js",
+    "index.html": "/learn-with-deepak/index.html",
+    "main.77253e6a.css.map": "/learn-with-deepak/static/css/main.77253e6a.css.map",
+    "main.af953f56.js.map": "/learn-with-deepak/static/js/main.af953f56.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77253e6a.css",
+    "static/js/main.af953f56.js"
+  ]
+}
