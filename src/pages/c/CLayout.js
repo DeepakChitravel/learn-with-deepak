@@ -1,13 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import CSSSidebar from '../../components/CSSSidebar';
+import CSidebar from '../../components/CSidebar';
 import '../../css/FundamentalsLayout.css';
 
-const CSSLayout = () => {
+const CLayout = () => {
   return (
     <div className="layout-container">
       {/* Left Sidebar */}
-      <CSSSidebar />
+      <CSidebar />
 
       {/* Main Content */}
       <div className="main-content">
@@ -38,4 +38,4 @@ const CSSLayout = () => {
   );
 };
 
-export default CSSLayout;
+export default CLayout;

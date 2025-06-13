@@ -1,13 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import CSSSidebar from '../../components/CSSSidebar';
+import MSOfficeSidebar from '../../components/MSOfficeSidebar';
 import '../../css/FundamentalsLayout.css';
 
-const CSSLayout = () => {
+const MSOfficeLayout = () => {
   return (
     <div className="layout-container">
       {/* Left Sidebar */}
-      <CSSSidebar />
+      <MSOfficeSidebar />
 
       {/* Main Content */}
       <div className="main-content">
@@ -38,4 +38,4 @@ const CSSLayout = () => {
   );
 };
 
-export default CSSLayout;
+export default MSOfficeLayout;
