@@ -1,49 +1,74 @@
+/* Base sidebar styles */
 .sidebar {
-  width: 350px;               /* Fixed width */
-  min-width: 270px;           /* Prevent shrinking */
-  max-width: 270px;           /* Prevent expansion */
-  background-color: #E7E9EB;
-  padding: 20px 10px;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;         /* Prevent horizontal scroll */
+  width: 240px;
+  padding: 16px;
+  background-color: #f1f1f1;
   position: sticky;
-  top: 0;
-  border-right: 1px solid #ccc;
-  box-sizing: border-box;
-  flex-shrink: 0;             /* Prevent shrinking in flex layout */
+  top: 60px; /* Adjust based on navbar height */
+  height: calc(100vh - 60px);
+  overflow-y: auto;
 }
 
+/* Sidebar title */
+.sidebar-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Sidebar links */
 .sidebar-nav a {
   display: block;
-  text-decoration: none;  /* REMOVE underline */
-  color: #000;            /* Force black text */
-  font-size: 15px;
-  transition: background-color 0.2s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: relative;
-    padding: 3px 15px 3px 40px;
-    width: 100%;
-}
-
-.sidebar-title {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0 0 16px 10px;
-  color: #000;             /* Force black color */
-}
-.sidebar-nav {
-  display: flex;
-  flex-direction: column;
+  padding: 10px 12px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #000;
+  border-radius: 4px;
+  transition: 0.2s;
 }
 
 .sidebar-nav a:hover {
-  background-color: #e7e9eb;
+  background-color: #ddd;
 }
 
 .sidebar-nav a.active {
   background-color: #04AA6D;
   color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 10px;
+    overflow-y: visible;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sidebar-title {
+    display: none;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 8px 0;
+  }
+
+  .sidebar-nav a {
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin: 0 8px;
+    padding: 8px 12px;
+    border-radius: 50px;
+    background-color: #f8f8f8;
+  }
+
+  .sidebar-nav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
 }

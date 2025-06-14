@@ -1,59 +1,78 @@
-/* Layout base */
+/* Container for the full layout */
 .layout-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: row;
+  min-height: 100vh;
 }
 
-/* Sidebar */
+/* Sidebar styles */
 .sidebar {
-  width: 350px;
-  background-color: #E7E9EB;
-  padding: 5px;
-  border-right: 1px solid #ccc;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  overflow-y: auto;
+  width: 250px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  flex-shrink: 0;
 }
-/* Main content */
+
 .main-content {
   flex-grow: 1;
-  padding: 0px 5px;
-  background-color: #fff;
-  overflow-y: auto;
-}
-/* Advertisement section */
-.ad-section {
-  width: 250px;
-  min-width: 210px;
-  max-width: 210px;
-  padding: 20px 10px;
-  background-color: transparent;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  box-sizing: border-box;
-  overflow-x: hidden; /* Prevent horizontal expansion */
+  padding: 20px;
+  background-color: #ffffff;
 }
 
+/* Right-side ad box */
+.ad-section {
+  width: 220px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  flex-shrink: 0;
+}
+
+/* Ad box styling */
 .ad-box {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   padding: 10px;
   text-align: center;
-  overflow: hidden;        /* Hide overflowing content */
-  word-wrap: break-word;   /* Break long words if needed */
 }
 
-.ad-box img {
-  max-width: 100%;         /* Prevent images from expanding */
-  height: auto;
-  display: block;
-  margin: 0 auto;
+/* --- Mobile responsiveness --- */
+@media (max-width: 991px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: none;
+  }
+
+  .sidebar.open {
+    display: block;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .ad-section {
+    width: 100%;
+    padding: 15px;
+    order: 3;
+  }
+
+  .menu-toggle {
+    display: block;
+    background-color: #04aa6d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
 }
-.top-ad-section {
-  background-color: #f9f9f9;
-  padding: 20px 10px;
-  border-bottom: 1px solid #ddd;
+
+.menu-toggle {
+  display: none;
 }

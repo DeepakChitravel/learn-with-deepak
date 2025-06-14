@@ -1,6 +1,6 @@
 // src/pages/fundamentals/Datatypes.js
 import React from 'react';
-import '../../css/CodeTemplate.css';
+
 
 const Datatypes = () => {
   return (
