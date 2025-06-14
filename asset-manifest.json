@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/learn-with-deepak/static/css/main.77253e6a.css",
-    "main.js": "/learn-with-deepak/static/js/main.ac006ae6.js",
+    "main.css": "/learn-with-deepak/static/css/main.c76d520d.css",
+    "main.js": "/learn-with-deepak/static/js/main.e605b19d.js",
     "index.html": "/learn-with-deepak/index.html",
-    "main.77253e6a.css.map": "/learn-with-deepak/static/css/main.77253e6a.css.map",
-    "main.ac006ae6.js.map": "/learn-with-deepak/static/js/main.ac006ae6.js.map"
+    "main.c76d520d.css.map": "/learn-with-deepak/static/css/main.c76d520d.css.map",
+    "main.e605b19d.js.map": "/learn-with-deepak/static/js/main.e605b19d.js.map"
   },
   "entrypoints": [
-    "static/css/main.77253e6a.css",
-    "static/js/main.ac006ae6.js"
+    "static/css/main.c76d520d.css",
+    "static/js/main.e605b19d.js"
   ]
 }
