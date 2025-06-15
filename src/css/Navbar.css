@@ -1,11 +1,45 @@
 /* Container */
 .w3-navbar-wrapper {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
   display: flex;
   align-items: center;
   background: linear-gradient(90deg, #02895c, #04aa6d);
-  padding: 10px 20px;
+  padding: 0px 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional additions to improve readability */
+.w3-sidebar h2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+}
+
+.w3-sidebar hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 12px 0;
+}
+
+.w3-sidebar ul li a {
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #333;
+  border-radius: 5px;
+}
+
+.w3-sidebar ul li a:hover,
+.w3-sidebar ul li a.active {
+  background-color: #dff6ef;
+  color: #04aa6d;
+  font-weight: 600;
+}
+
+.w3-navbar-scroll {
+  scroll-behavior: smooth;
 }
 
 /* Menu icon */
@@ -38,12 +72,12 @@
 .w3-nav-item {
   display: inline-block;
   color: white;
-  padding: 8px 20px;
+  padding: 0px 10px;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-right: 8px;
 }
 
@@ -119,4 +153,31 @@
   font-weight: bold;
   color: #04aa6d;
   background-color: #e0f5ec;
+}
+.w3-auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.auth-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: white;
+  color: #04aa6d;
+}
+
+.auth-btn.signup {
+  background-color: #ffffff;
+  color: #04aa6d;
+  font-weight: bold;
 }

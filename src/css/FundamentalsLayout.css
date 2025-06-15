@@ -20,6 +20,7 @@
 
 .ad-section {
   border-left: 1px solid #ddd;
+  padding-top: 70px;
 }
 
 .main-content {
@@ -28,6 +29,7 @@
   background-color: #ffffff;
   overflow-y: auto;
   z-index: 0;
+  padding-top: 60px;
 }
 
 /* Amazon Ad Box Styling */
