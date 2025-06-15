@@ -1,78 +1,152 @@
-/* Container for the full layout */
+/* Layout Structure */
 .layout-container {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+  position: relative;
+  background-color: #f0f2f5;
 }
 
-/* Sidebar styles */
-.sidebar {
+/* Sidebar and Right Ads */
+.sidebar, .ad-section {
   width: 250px;
-  background-color: #f1f1f1;
-  padding: 20px;
-  flex-shrink: 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  overflow-y: auto;
+  height: 100vh;
+  z-index: 1;
+}
+
+.ad-section {
+  border-left: 1px solid #ddd;
 }
 
 .main-content {
-  flex-grow: 1;
+  flex: 1;
   padding: 20px;
   background-color: #ffffff;
+  overflow-y: auto;
+  z-index: 0;
 }
 
-/* Right-side ad box */
-.ad-section {
-  width: 220px;
+/* Amazon Ad Box Styling */
+.amazon-box {
+  background: #fff;
   padding: 15px;
-  background-color: #f9f9f9;
-  flex-shrink: 0;
-}
-
-/* Ad box styling */
-.ad-box {
-  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
   text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Mobile responsiveness --- */
-@media (max-width: 991px) {
+.amazon-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.amazon-box p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Mobile Styles */
+.menu-toggle {
+  display: none;
+}
+
+.amazon-box img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+
+/* Show toggle and stack content on mobile */
+@media (max-width: 768px) {
   .layout-container {
     flex-direction: column;
   }
 
-  .sidebar {
-    width: 100%;
+  .sidebar, .ad-section {
     display: none;
+    width: 100%;
+    height: auto;
+    border: none;
+    box-shadow: none;
   }
 
   .sidebar.open {
     display: block;
   }
 
-  .main-content {
-    padding: 15px;
-  }
-
-  .ad-section {
-    width: 100%;
-    padding: 15px;
-    order: 3;
-  }
-
   .menu-toggle {
     display: block;
-    background-color: #04aa6d;
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 15px;
-    margin: 10px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
+    margin: 10px;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+
+  .main-content {
+    padding: 20px 10px;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+}@media (max-width: 768px) {
+  .amazon-box {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .amazon-box img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .main-content {
+    padding: 16px 8px;
   }
 }
 
-.menu-toggle {
-  display: none;
+.amazon-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.amazon-box img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.amazon-box h4 {
+  font-size: 15px;
+  color: #222;
+}
+
+.amazon-box p {
+  font-size: 14px;
+  margin: 6px 0;
 }

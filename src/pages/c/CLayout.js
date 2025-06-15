@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import CSidebar from '../../components/CSidebar';
+import AmazonAdBox from '../../components/AmazonAdBox';
 import '../../css/FundamentalsLayout.css';
 
 const CLayout = () => {
@@ -8,14 +8,14 @@ const CLayout = () => {
 
   return (
     <div className="layout-container">
-      {/* Toggle Button (visible on small screens) */}
+      {/* Toggle Button for Small Screens */}
       <button className="menu-toggle" onClick={() => setSidebarOpen(!sidebarOpen)}>
-        ☰ Menu
+        ☰ Ads
       </button>
 
-      {/* Sidebar with toggle logic */}
-      <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
-        <CSidebar />
+      {/* Left Amazon Ad Box (collapsible) */}
+      <div className={`sidebar amazon-sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <AmazonAdBox />
       </div>
 
       {/* Main Content */}
@@ -23,24 +23,9 @@ const CLayout = () => {
         <Outlet />
       </div>
 
-      {/* Right Advertisement */}
-      <div className="ad-section">
-        <div className="ad-box">
-          <p><strong>🔥 Naruto Special</strong></p>
-          <a
-            href="https://en.wikipedia.org/wiki/Naruto"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg"
-              alt="Naruto Cover"
-              style={{ width: '100%', borderRadius: '8px' }}
-            />
-            <p style={{ marginTop: '10px' }}>Watch Naruto – Legendary Ninja Journey!</p>
-          </a>                                            
-        </div>
+      {/* Right Amazon Ad Box (hidden on small screens) */}
+      <div className="ad-section hide-on-mobile">
+        <AmazonAdBox />
       </div>
     </div>
   );
